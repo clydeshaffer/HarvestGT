@@ -1,0 +1,117 @@
+{ "frames": [
+   {
+    "filename": "vegemons 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 18, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 3, "w": 18, "h": 28 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 1.aseprite",
+    "frame": { "x": 109, "y": 12, "w": 15, "h": 15 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 17, "y": 18, "w": 15, "h": 15 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 2.aseprite",
+    "frame": { "x": 58, "y": 16, "w": 12, "h": 14 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 18, "w": 12, "h": 14 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 3.aseprite",
+    "frame": { "x": 87, "y": 0, "w": 11, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 18, "y": 10, "w": 11, "h": 22 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 4.aseprite",
+    "frame": { "x": 77, "y": 0, "w": 10, "h": 28 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 19, "y": 4, "w": 10, "h": 28 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 5.aseprite",
+    "frame": { "x": 38, "y": 18, "w": 10, "h": 16 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 19, "y": 10, "w": 10, "h": 16 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 6.aseprite",
+    "frame": { "x": 98, "y": 0, "w": 11, "h": 21 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 19, "y": 12, "w": 11, "h": 21 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 7.aseprite",
+    "frame": { "x": 58, "y": 0, "w": 19, "h": 16 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 17, "w": 19, "h": 16 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 8.aseprite",
+    "frame": { "x": 109, "y": 0, "w": 19, "h": 12 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 16, "w": 19, "h": 12 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 9.aseprite",
+    "frame": { "x": 38, "y": 0, "w": 20, "h": 18 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 15, "w": 20, "h": 18 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "vegemons 10.aseprite",
+    "frame": { "x": 18, "y": 0, "w": 20, "h": 22 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 14, "y": 9, "w": 20, "h": 22 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "vegemons.bmp",
+  "format": "I8",
+  "size": { "w": 128, "h": 34 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

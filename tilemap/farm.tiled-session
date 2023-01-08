@@ -1,0 +1,86 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "beach.tmx": {
+            "scale": 3.6682617187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 215.36086042115915,
+                "y": 212.08955621223012
+            }
+        },
+        "clearing.tmx": {
+            "scale": 3.6682617187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 278.06085775896497,
+                "y": 278.06085775896497
+            }
+        },
+        "desert.tmx": {
+            "scale": 3.6682617187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 257.3425977690813,
+                "y": 276.6978143385779
+            }
+        },
+        "forest0.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 329.3333333333333,
+                "y": 250.66666666666663
+            }
+        },
+        "homestead.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 224.25,
+                "y": 269.25
+            }
+        },
+        "maze.tmx": {
+            "scale": 3.6682617187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 255.97955434869417,
+                "y": 255.9795543486942
+            }
+        },
+        "road.tmx": {
+            "scale": 3.6682617187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 256.25216303277165,
+                "y": 256.2521630327716
+            }
+        }
+    },
+    "last.exportedFilePath": "C:/Users/Clyde/Repos/GTHarvest/assets",
+    "last.imagePath": "C:/Users/Clyde/Repos/GTHarvest/assets",
+    "map.height": 32,
+    "map.lastUsedExportFilter": "CSV files (*.csv)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 32,
+    "openFiles": [
+    ],
+    "project": "farm.tiled-project",
+    "recentFiles": [
+        "homestead.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

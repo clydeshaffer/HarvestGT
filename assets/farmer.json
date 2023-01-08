@@ -1,0 +1,153 @@
+{ "frames": [
+   {
+    "filename": "farmer 0.aseprite",
+    "frame": { "x": 68, "y": 40, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 1.aseprite",
+    "frame": { "x": 90, "y": 40, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 2.aseprite",
+    "frame": { "x": 0, "y": 50, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 3.aseprite",
+    "frame": { "x": 22, "y": 60, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 4.aseprite",
+    "frame": { "x": 44, "y": 60, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 5.aseprite",
+    "frame": { "x": 66, "y": 60, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 6.aseprite",
+    "frame": { "x": 88, "y": 60, "w": 22, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 22, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 7.aseprite",
+    "frame": { "x": 97, "y": 20, "w": 29, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 29, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 8.aseprite",
+    "frame": { "x": 35, "y": 40, "w": 33, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 33, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 9.aseprite",
+    "frame": { "x": 62, "y": 0, "w": 35, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 35, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 10.aseprite",
+    "frame": { "x": 62, "y": 20, "w": 35, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 35, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 11.aseprite",
+    "frame": { "x": 0, "y": 30, "w": 35, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 12, "w": 35, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 12.aseprite",
+    "frame": { "x": 97, "y": 0, "w": 31, "h": 20 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 13, "y": 9, "w": 31, "h": 20 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 13.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 30 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 12, "y": 12, "w": 31, "h": 30 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   },
+   {
+    "filename": "farmer 14.aseprite",
+    "frame": { "x": 31, "y": 0, "w": 31, "h": 29 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 10, "y": 12, "w": 31, "h": 29 },
+    "sourceSize": { "w": 48, "h": 48 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "farmer.bmp",
+  "format": "I8",
+  "size": { "w": 128, "h": 80 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

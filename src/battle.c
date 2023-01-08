@@ -1,0 +1,344 @@
+
+#include "gametank.h"
+#include "battle.h"
+#include "drawing_funcs.h"
+#include "vegetables.h"
+#include "fontmap.h"
+#include "music.h"
+
+extern unsigned char EnemyFrames_VEGGIES;
+unsigned char menu_index;
+
+
+char menuMode, textboxX, textboxY, textboxW, textboxH;
+
+#define MENU_TYPE_NONE 0
+#define MENU_TYPE_MESSAGE 1
+#define MENU_TYPE_ACTION 2
+#define MENU_TYPE_PARTY 3
+#define MENU_TYPE_SKILL 4
+
+#define TEXT_BG_COLOR 212
+
+char messageBuf[25];
+char stateChangeTimer = 0;
+char playerVeggieX = 0;
+char wildVeggieX = 0;
+char menuEntries = 0;
+char currentPartyIndex = 0;
+
+#define BATTLE_STATE_MESSAGE 0
+#define BATTLE_STATE_DECIDE 1
+#define BATTLE_STATE_PLAYER_MOVE 2
+#define BATTLE_STATE_ENEMY_MOVE 3
+#define BATTLE_STATE_COMPLETE 4
+
+char battle_state;
+char next_battle_state;
+
+#pragma codeseg (push, "CODE2");
+
+char checkLoseCondition() {
+    char i;
+    for(i = 0; i < 5; i++) {
+        if(player_party[i].type != VEGGIE_TYPE_NONE)
+            return 0;
+    }
+    return 1;
+}
+
+void setMenuRect(char menuType) {
+    if(menuMode != menuType) {
+        menu_index = 0;
+        if(menuMode == MENU_TYPE_PARTY)
+            menu_index = 2;
+        else if(menuMode == MENU_TYPE_SKILL)
+            menu_index = 1;
+    }
+    menuMode = menuType;
+    switch (menuType)
+    {
+    case MENU_TYPE_ACTION:
+        textboxX = 16;
+        textboxY = 8;
+        textboxW = 48;
+        textboxH = 36;
+        menuEntries = 4;
+        break;
+    case MENU_TYPE_PARTY:
+        textboxX = 16;
+        textboxY = 8;
+        textboxW = 48;
+        textboxH = 45;
+        menuEntries = 5;
+        break;
+    case MENU_TYPE_SKILL:
+        textboxX = 16;
+        textboxY = 8;
+        textboxW = 48;
+        textboxH = 18;
+        menuEntries = 2;
+        break;
+    case MENU_TYPE_MESSAGE:
+        textboxX = 16;
+        textboxY = 8;
+        textboxW = 108;
+        textboxH = 9;
+        menuEntries = 1;
+        break;
+    default:
+        break;
+    }
+}
+
+void renderMenuText() {
+    char i;
+    switch (menuMode)
+    {
+    case MENU_TYPE_ACTION:
+        cursorX = 21; cursorY = 13;
+        print("Attack");
+        cursorX = 21; cursorY = 21;
+        print("Skill");
+        cursorX = 21; cursorY = 29;
+        print("Party");
+        cursorX = 21; cursorY = 37;
+        print("Flee");
+        break;
+    case MENU_TYPE_PARTY:
+        cursorY = 13;
+        for(i = 0; i < 5; ++i) {
+            cursorX = 21;
+            print(veggie_names[player_party[i].type]);
+            cursorY += 8;
+        }
+        break;
+    case MENU_TYPE_SKILL:
+        cursorX = 21; cursorY = 13;
+        print("???");
+        cursorX = 21; cursorY = 21;
+        print("???");
+        break;
+    case MENU_TYPE_MESSAGE:
+        cursorX = 21; cursorY = 13;
+        messageBuf[24] = 0;
+        print(messageBuf);
+    default:
+        break;
+    }
+}
+
+void draw_battle_screen() {
+    queue_flags_param = DMA_GCARRY;
+    //Draw BG
+    SET_RECT(0, 0, 127, 127, 0, 128, 0,  bankflip);
+    QueueSpriteRect();
+    //Draw player veggie
+    QueuePackedSprite(&EnemyFrames_VEGGIES, 32 + playerVeggieX, 80, player_active_veggie.type - 1, 0, bankflip | 2, 0);
+
+    //Draw wild veggie
+    QueuePackedSprite(&EnemyFrames_VEGGIES, 96 + wildVeggieX, 80, encountered_veggie.type - 1, SPRITE_FLIP_X, bankflip | 2, 0);
+
+    if(menuMode != MENU_TYPE_NONE) {
+        if(menuMode != MENU_TYPE_MESSAGE) {
+            QueuePackedSprite(&FontFrames, 12, 13 + (menu_index << 3), '>' - 1, 0, bankflip, 128);
+        }
+        QueueFillRect(textboxX, textboxY, textboxW, textboxH, TEXT_BG_COLOR);
+    }
+}
+
+void draw_battle_screen_postqueue() {
+    cursorX = 20;
+    cursorY = 96;
+    print(veggie_names[player_active_veggie.type]);
+    cursorY = 104;
+    printBCDnum(player_active_veggie.maxhp);
+    cursorX -= 4;
+    print("/");
+    cursorX -= 12;
+    printBCDnum(player_active_veggie.hp);
+    
+    
+    cursorX = 70;
+    cursorY = 96;
+    print(veggie_names[encountered_veggie.type]);
+    cursorY = 104;
+    printBCDnum(encountered_veggie.maxhp);
+    cursorX -= 4;
+    print("/");
+    cursorX -= 12;
+    printBCDnum(encountered_veggie.hp);
+
+    renderMenuText();
+}
+
+void set_msg(char* newMsg, char i) {
+    while(*newMsg != 0) {
+        messageBuf[i] = *newMsg;
+        ++i;
+        ++newMsg;
+    }
+    messageBuf[i] = 0;
+}
+
+void init_battle(unsigned char template_num) {
+    menu_index = 0;
+    player_active_veggie = player_party[0];
+    currentPartyIndex = 0;
+    encountered_veggie = veggie_templates[template_num];
+    battle_state = BATTLE_STATE_MESSAGE;
+    next_battle_state = BATTLE_STATE_DECIDE;
+    stateChangeTimer = 180;
+    setMenuRect(MENU_TYPE_MESSAGE);
+    set_msg("Found ", 0);
+    set_msg(veggie_names[encountered_veggie.type], 6);
+}
+
+unsigned char update_battle(int inputs, int last_inputs) {
+    unsigned char outsignal = BATTLE_SIGNAL_NONE;
+    if(battle_state == BATTLE_STATE_DECIDE) {
+            playerVeggieX = 0;
+            wildVeggieX = 0;
+            if(INPUT_MASK_DOWN & inputs & ~last_inputs) {
+                ++menu_index;
+            }
+            if(INPUT_MASK_UP & inputs & ~last_inputs) {
+                --menu_index;
+            }
+            if(menu_index == 255) menu_index = 0;
+            if(menu_index >= menuEntries) menu_index = menuEntries-1;
+        
+
+            if(INPUT_MASK_A & inputs & ~last_inputs) {
+                if(menuMode == MENU_TYPE_ACTION) {
+                    switch (menu_index)
+                    {
+                    case 0: //attack
+                        asm("SED");
+                        encountered_veggie.hp = encountered_veggie.hp - player_active_veggie.atk;
+                        asm("CLD");
+                        do_noise_effect(30, 64, 8);
+                        battle_state = BATTLE_STATE_PLAYER_MOVE;
+                        setMenuRect(MENU_TYPE_NONE);
+                        stateChangeTimer = 30;
+                        break;
+                    case 1: //skill
+                        setMenuRect(MENU_TYPE_SKILL);
+                        break;
+                    case 2: //party
+                        setMenuRect(MENU_TYPE_PARTY);
+                        break;
+                    case 3: //flee
+                        player_party[currentPartyIndex] = player_active_veggie;
+                        battle_state = BATTLE_STATE_MESSAGE;
+                        next_battle_state = BATTLE_STATE_COMPLETE;
+                        stateChangeTimer = 180;
+                        setMenuRect(MENU_TYPE_MESSAGE);
+                        set_msg("Ran away...", 0);
+                        break;
+                    default:
+                        break;
+                    }
+                } else if(menuMode == MENU_TYPE_PARTY) {
+                    if(player_party[menu_index].type != VEGGIE_TYPE_NONE) {
+                        if(menu_index == currentPartyIndex) {
+                            battle_state = BATTLE_STATE_MESSAGE;
+                            next_battle_state = BATTLE_STATE_DECIDE;
+                            stateChangeTimer = 180;
+                            setMenuRect(MENU_TYPE_MESSAGE);
+                            set_msg("Already out!", 0);
+                        } else {
+                            player_party[currentPartyIndex] = player_active_veggie;
+                            currentPartyIndex = menu_index;
+                            player_active_veggie = player_party[currentPartyIndex];
+                            battle_state = BATTLE_STATE_MESSAGE;
+                            next_battle_state = BATTLE_STATE_DECIDE;
+                            stateChangeTimer = 180;
+                            setMenuRect(MENU_TYPE_MESSAGE);
+                            set_msg("Sent out ", 0);
+                            set_msg(veggie_names[player_active_veggie.type], 9);
+                        }
+                    }
+                }
+            }
+
+            if(INPUT_MASK_B & inputs & ~last_inputs) {
+                if(menuMode == MENU_TYPE_PARTY) {
+                    if(player_active_veggie.hp != 0) {
+                        setMenuRect(MENU_TYPE_ACTION);
+                    }
+                } else {
+                    if(menuMode != MENU_TYPE_ACTION) {
+                        setMenuRect(MENU_TYPE_ACTION);
+                    }
+                }
+            }
+    } else if(battle_state == BATTLE_STATE_MESSAGE) {
+        stateChangeTimer--;
+        if(stateChangeTimer == 0 || (INPUT_MASK_A & inputs & ~last_inputs)) {
+            battle_state = next_battle_state;
+            if(battle_state == BATTLE_STATE_DECIDE) {
+                setMenuRect(MENU_TYPE_ACTION);
+            }
+        }
+    } else if(battle_state == BATTLE_STATE_PLAYER_MOVE) {
+        wildVeggieX = 0;
+        playerVeggieX = stateChangeTimer >> 3;
+        stateChangeTimer--;
+        if(stateChangeTimer == 0) {
+            if(encountered_veggie.hp == 0) {
+                player_party[currentPartyIndex] = player_active_veggie;
+                battle_state = BATTLE_STATE_MESSAGE;
+                next_battle_state = BATTLE_STATE_COMPLETE;
+                stateChangeTimer = 180;
+                setMenuRect(MENU_TYPE_MESSAGE);
+                set_msg("You win! Picked up seeds", 0);
+                //asm("SED");
+                seed_inventory[encountered_veggie.type] = seed_inventory[encountered_veggie.type]+1;
+                //asm("CLD");
+            } else {
+                asm("SED");
+                player_active_veggie.hp = player_active_veggie.hp - 1;//encountered_veggie.atk;
+                asm("CLD");
+                stateChangeTimer = 30;
+                battle_state = BATTLE_STATE_ENEMY_MOVE;
+                if(battle_state == BATTLE_STATE_DECIDE) {
+                    setMenuRect(MENU_TYPE_ACTION);
+                }
+                do_noise_effect(30, 64, 8);
+            }
+        }
+
+    } else if (battle_state == BATTLE_STATE_ENEMY_MOVE) {
+        playerVeggieX = 0;
+        wildVeggieX = 255 - (stateChangeTimer >> 3);
+        stateChangeTimer--;
+        if(stateChangeTimer == 0) {
+            if(player_active_veggie.hp == 0) {
+                player_party[currentPartyIndex].type = VEGGIE_TYPE_NONE;
+            }
+            if(checkLoseCondition()) {
+                battle_state = BATTLE_STATE_MESSAGE;
+                next_battle_state = BATTLE_STATE_COMPLETE;
+                stateChangeTimer = 180;
+                setMenuRect(MENU_TYPE_MESSAGE);
+                set_msg("Wiped out...", 0);
+            } else {
+                battle_state = BATTLE_STATE_DECIDE;
+                if(battle_state == BATTLE_STATE_DECIDE) {
+                    setMenuRect(MENU_TYPE_ACTION);
+                }
+            }
+        }
+    } else if(battle_state == BATTLE_STATE_COMPLETE) {
+        if(encountered_veggie.hp == 0) {
+            outsignal = BATTLE_SIGNAL_VICTORY;
+        } else if(checkLoseCondition()) {
+            outsignal = BATTLE_SIGNAL_DEFEAT;
+        } else {
+            outsignal = BATTLE_SIGNAL_FLED;
+        }
+    }
+    return outsignal;
+}
+#pragma codeseg (pop);
