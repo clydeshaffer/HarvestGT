@@ -646,15 +646,19 @@ void main() {
         }
 
         if(player_y.i < 64) {
+            resetSeeds();
             init_level(world_map_x, world_map_y-1);
             ChangeRomBank(BANK_COMMON);
         } else if(player_y.i > 8096) {
+            resetSeeds();
             init_level(world_map_x, world_map_y+1);
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i < 64) {
+            resetSeeds();
             init_level(world_map_x-1, world_map_y);
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i > 8096) {
+            resetSeeds();
             init_level(world_map_x+1, world_map_y);
             ChangeRomBank(BANK_COMMON);
         }
