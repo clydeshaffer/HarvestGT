@@ -435,7 +435,7 @@ L0005:	adc     #<(_veggie_names)
 	ldx     #$00
 	lda     _battle_state
 	cmp     #$01
-	jne     L0041
+	jne     L0045
 	stz     _playerVeggieX
 	stz     _wildVeggieX
 	ldy     #$03
@@ -494,9 +494,9 @@ L0003:	ldy     #$03
 	dec     _menu_index
 L0004:	lda     _menu_index
 	cmp     #$FF
-	bne     L003C
+	bne     L003F
 	stz     _menu_index
-L003C:	lda     _menu_index
+L003F:	lda     _menu_index
 	cmp     _menuEntries
 	bcc     L0006
 	lda     _menuEntries
@@ -515,7 +515,7 @@ L0006:	iny
 	jeq     L0015
 	lda     _menuMode
 	cmp     #$02
-	jne     L003E
+	jne     L0041
 	lda     _menu_index
 	beq     L000C
 	cmp     #$01
@@ -523,7 +523,7 @@ L0006:	iny
 	cmp     #$02
 	beq     L000E
 	cmp     #$03
-	beq     L003D
+	beq     L0040
 	jmp     L0015
 L000C:	sed
 	lda     _encountered_veggie+1
@@ -552,7 +552,7 @@ L000D:	lda     #$04
 L000E:	ina
 	jsr     _setMenuRect
 	jmp     L0015
-L003D:	lda     _currentPartyIndex
+L0040:	lda     _currentPartyIndex
 	jsr     pusha0
 	lda     #$14
 	jsr     tosmula0
@@ -581,8 +581,8 @@ L003D:	lda     _currentPartyIndex
 	ldx     #>(S0056)
 	jsr     pushax
 	lda     #$00
-	jmp     L0039
-L003E:	lda     _menuMode
+	jmp     L003C
+L0041:	lda     _menuMode
 	cmp     #$03
 	jne     L0015
 	lda     _menu_index
@@ -599,7 +599,7 @@ L003E:	lda     _menuMode
 	jeq     L0015
 	lda     _menu_index
 	cmp     _currentPartyIndex
-	bne     L003F
+	bne     L0042
 	stz     _battle_state
 	lda     #$01
 	sta     _next_battle_state
@@ -611,8 +611,10 @@ L003E:	lda     _menuMode
 	ldx     #>(S0057)
 	jsr     pushax
 	lda     #$00
-	jmp     L0039
-L003F:	lda     _currentPartyIndex
+	jmp     L003C
+L0042:	lda     _player_active_veggie+1
+	beq     L0043
+	lda     _currentPartyIndex
 	jsr     pusha0
 	lda     #$14
 	jsr     tosmula0
@@ -630,7 +632,7 @@ L003F:	lda     _currentPartyIndex
 	ldx     #$00
 	lda     #$14
 	jsr     _memcpy
-	lda     _menu_index
+L0043:	lda     _menu_index
 	sta     _currentPartyIndex
 	lda     #<(_player_active_veggie)
 	ldx     #>(_player_active_veggie)
@@ -665,10 +667,10 @@ L003F:	lda     _currentPartyIndex
 	ldx     #$00
 	lda     _player_active_veggie
 	asl     a
-	bcc     L003B
+	bcc     L003E
 	inx
 	clc
-L003B:	adc     #<(_veggie_names)
+L003E:	adc     #<(_veggie_names)
 	sta     ptr1
 	txa
 	adc     #>(_veggie_names)
@@ -679,7 +681,7 @@ L003B:	adc     #<(_veggie_names)
 	lda     (ptr1)
 	jsr     pushax
 	lda     #$09
-L0039:	jsr     _set_msg
+L003C:	jsr     _set_msg
 L0015:	ldy     #$03
 	lda     (sp),y
 	and     #$10
@@ -696,26 +698,26 @@ L0015:	ldy     #$03
 	sta     tmp1
 	pla
 	ora     tmp1
-	jeq     L0037
+	jeq     L003A
 	ldx     #$00
 	lda     _menuMode
 	cmp     #$03
-	bne     L0040
+	bne     L0044
 	lda     _player_active_veggie+1
-	jeq     L0049
+	jeq     L004D
 	lda     #$02
 	jsr     _setMenuRect
-	jmp     L0037
-L0040:	lda     _menuMode
+	jmp     L003A
+L0044:	lda     _menuMode
 	cmp     #$02
-	jeq     L0049
+	jeq     L004D
 	lda     #$02
 	jsr     _setMenuRect
-	jmp     L0037
-L0041:	lda     _battle_state
-	bne     L0043
+	jmp     L003A
+L0045:	lda     _battle_state
+	bne     L0047
 	dec     _stateChangeTimer
-	beq     L0042
+	beq     L0046
 	ldy     #$02
 	lda     (sp),y
 	and     #$10
@@ -725,17 +727,17 @@ L0041:	lda     _battle_state
 	and     ptr1
 	pha
 	pla
-	jeq     L0049
-L0042:	lda     _next_battle_state
+	jeq     L004D
+L0046:	lda     _next_battle_state
 	sta     _battle_state
 	cmp     #$01
-	jne     L0049
+	jne     L004D
 	ina
 	jsr     _setMenuRect
-	jmp     L0037
-L0043:	lda     _battle_state
+	jmp     L003A
+L0047:	lda     _battle_state
 	cmp     #$02
-	jne     L0045
+	jne     L0049
 	stz     _wildVeggieX
 	lda     _stateChangeTimer
 	lsr     a
@@ -743,9 +745,9 @@ L0043:	lda     _battle_state
 	lsr     a
 	sta     _playerVeggieX
 	dec     _stateChangeTimer
-	jne     L0049
+	jne     L004D
 	lda     _encountered_veggie+1
-	bne     L0024
+	bne     L0025
 	lda     _currentPartyIndex
 	jsr     pusha0
 	lda     #$14
@@ -780,17 +782,17 @@ L0043:	lda     _battle_state
 	ldx     #>(_seed_inventory)
 	clc
 	adc     _encountered_veggie
-	bcc     L0025
+	bcc     L0026
 	inx
-L0025:	sta     ptr1
+L0026:	sta     ptr1
 	stx     ptr1+1
 	ldy     _encountered_veggie
 	ldx     #$00
 	lda     _seed_inventory,y
 	ina
 	sta     (ptr1)
-	jmp     L0049
-L0024:	sed
+	jmp     L004D
+L0025:	sed
 	lda     _player_active_veggie+1
 	sec
 	sbc     #$01
@@ -808,10 +810,10 @@ L0024:	sed
 	sta     (sp)
 	lda     #$08
 	jsr     _do_noise_effect
-	jmp     L0037
-L0045:	lda     _battle_state
+	jmp     L003A
+L0049:	lda     _battle_state
 	cmp     #$03
-	bne     L0047
+	bne     L004B
 	stz     _playerVeggieX
 	lda     #$FF
 	jsr     pusha0
@@ -824,9 +826,9 @@ L0045:	lda     _battle_state
 	dec     _stateChangeTimer
 	ldx     #$00
 	lda     _stateChangeTimer
-	bne     L0049
+	bne     L004D
 	lda     _player_active_veggie+1
-	bne     L002E
+	bne     L002F
 	lda     _currentPartyIndex
 	jsr     pusha0
 	lda     #$14
@@ -839,9 +841,9 @@ L0045:	lda     _battle_state
 	sta     ptr1+1
 	lda     #$00
 	sta     (ptr1)
-L002E:	jsr     _checkLoseCondition
+L002F:	jsr     _checkLoseCondition
 	tax
-	beq     L0046
+	beq     L004A
 	stz     _battle_state
 	lda     #$04
 	sta     _next_battle_state
@@ -854,28 +856,33 @@ L002E:	jsr     _checkLoseCondition
 	jsr     pushax
 	lda     #$00
 	jsr     _set_msg
-	bra     L0037
-L0046:	ina
+	bra     L003A
+L004A:	ina
 	sta     _battle_state
+	lda     _player_active_veggie+1
+	bne     L0033
 	lda     #$03
 	jsr     _setMenuRect
-	bra     L0037
-L0047:	lda     _battle_state
+	bra     L003A
+L0033:	lda     #$02
+	jsr     _setMenuRect
+	bra     L003A
+L004B:	lda     _battle_state
 	cmp     #$04
-	bne     L0049
+	bne     L004D
 	lda     _encountered_veggie+1
-	bne     L0034
+	bne     L0037
 	ina
-	bra     L003A
-L0034:	jsr     _checkLoseCondition
+	bra     L003D
+L0037:	jsr     _checkLoseCondition
 	tax
-	beq     L0048
+	beq     L004C
 	lda     #$03
-	bra     L003A
-L0048:	lda     #$02
-L003A:	sta     M0001
-L0037:	ldx     #$00
-L0049:	lda     M0001
+	bra     L003D
+L004C:	lda     #$02
+L003D:	sta     M0001
+L003A:	ldx     #$00
+L004D:	lda     M0001
 	jmp     incsp4
 
 .segment	"BSS"

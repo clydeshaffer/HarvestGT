@@ -157,7 +157,7 @@ battle.o:
     DATA              Offs=00021F  Size=000005  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
-    CODE2             Offs=00156A  Size=000847  Align=00001  Fill=0000
+    CODE2             Offs=00156A  Size=000858  Align=00001  Fill=0000
 main.o:
     CODE              Offs=002409  Size=001090  Align=00001  Fill=0000
     RODATA            Offs=000113  Size=000048  Align=00001  Fill=0000
@@ -492,12 +492,12 @@ NULL                  000000  000000  000000  00001
 ZEROPAGE              000000  00001F  000020  00001
 DATA                  000200  000456  000257  00001
 BSS                   000457  001033  000BDD  00001
-CODE2                 008000  009DB0  001DB1  00001
+CODE2                 008000  009DC1  001DC2  00001
 LOADONCE              008000  008D82  000D83  00001
 MONSTERS              008000  0083A1  0003A2  00001
 TILES                 008000  00A67D  00267E  00001
 SAVEGAME              008001  008007  000007  00001
-COMMON                009DB1  00A3CD  00061D  00001
+COMMON                009DC2  00A3DE  00061D  00001
 ONCE                  00C257  00C262  00000C  00001
 CODE                  00C263  00FC95  003A33  00001
 RODATA                00FC96  00FE10  00017B  00001
@@ -507,21 +507,21 @@ VECTORS               00FFFA  00FFFF  000006  00001
 
 Exports list by name:
 ---------------------
-_BattleBG                 0086C0 RLA    _BattleMusic              009F43 RLA    
+_BattleBG                 0086C0 RLA    _BattleMusic              009F54 RLA    
 _BeachMap                 009A7E RLA    _CLB                      00C8C7 RLA    
 _CLS                      00C942  LA    _ChangeRomBank            00E382 RLA    
 _ClearingMap              009E7E RLA    _DesertMap                00967E RLA    
-_DynaWave                 008000 RLA    _EnemyFrames_VEGGIES      00A376 RLA    
+_DynaWave                 008000 RLA    _EnemyFrames_VEGGIES      00A387 RLA    
 _EnemySprites_VEGGIES     008000 RLA    _FillRect                 00C980 RLA    
-_FlushQueue               00C8AD  LA    _FontFrames               00A14E RLA    
+_FlushQueue               00C8AD  LA    _FontFrames               00A15F RLA    
 _FontSprites              008591 RLA    _Forest0Map               008E7E RLA    
-_HeroFrames               00A0D6 RLA    _HeroSprites              0081FE RLA    
+_HeroFrames               00A0E7 RLA    _HeroSprites              0081FE RLA    
 _HomesteadMap             008A7E RLA    _LD_enemy_index           00C3D1 RLA    
-_MainMusic                009EB1 RLA    _MazeMap                  00927E RLA    
+_MainMusic                009EC2 RLA    _MazeMap                  00927E RLA    
 _NextQueue                00C297 RLA    _PackedSprite             008000  LA    
 _QueueFillRect            00C7F7 RLA    _QueuePackedSprite        0080C3 RLA    
 _QueueSpriteRect          00C785 RLA    _RoadMap                  00A27E RLA    
-_ST_enemy_index           00C481 RLA    _SineTable                009DB1 RLA    
+_ST_enemy_index           00C481 RLA    _SineTable                009DC2 RLA    
 _Sleep                    00E70D  LA    _SpriteRect               00C9BF  LA    
 _SpriteRectImmediate      00CA34 RLA    _SwitchRomBank            00FE52  LA    
 _Tileset_00               008000 RLA    __BSS_LOAD__              000457  LA    
@@ -549,7 +549,7 @@ _audio_params_index       0002F2  LA    _bankflip                 000217 RLA
 _banksMirror              000219 RLA    _battle_state             000D13  LA    
 _big_circle               00947A  LA    _camera_x                 0002F7 RLA    
 _camera_y                 0002F9 RLA    _character_tilemap_check  00CE28 RLA    
-_checkLoseCondition       009B80  LA    _check_impact_attack      00926A  LA    
+_checkLoseCondition       009B91  LA    _check_impact_attack      00926A  LA    
 _check_player_attack      009131  LA    _circle_position          009370  LA    
 _clear_enemies            00DE7A RLA    _clear_enemy_slots        00DD83 RLA    
 _clear_save               00E4B0 RLA    _clear_spritebank         00C6D6  LA    
@@ -572,7 +572,7 @@ _find_start_tile          00D1DB RLA    _flagsMirror              000218 RLA
 _flush_audio_params       00C5E5 RLA    _frameflag                000215 RLA    
 _frameflip                000216 RLA    _game_over_timer          00042D  LA    
 _game_state               00042C  LA    _generate_map             00818D RLA    
-_get_first_party_veggie   009D82  LA    _go_to_next_level         000431  LA    
+_get_first_party_veggie   009D93  LA    _go_to_next_level         000431  LA    
 _ignoreCamera             000310  LA    _inflatemem               00F863 RLA    
 _init                     00FE11 RLA    _init_battle              00965C RLA    
 _init_dynawave            00C56E RLA    _init_enemy               00DDCA  LA    
@@ -618,7 +618,7 @@ _queue_count              000004 RLZ    _queue_end                000003 RLZ
 _queue_flags_param        003200 REA    _queue_pending            000005 RLZ    
 _queue_start              000002 RLZ    _randomInventorySeed      00E5A2 RLA    
 _random_loaded_enemy_slot 00DD9E  LA    _random_reduce_rect       00D360  LA    
-_rect                     003201 REA    _renderMenuText           009C4E  LA    
+_rect                     003201 REA    _renderMenuText           009C5F  LA    
 _repeat_point             0009A8  LA    _repeat_resume_pending    000309  LA    
 _resetSeeds               00E54F RLA    _rnd                      00DAB2 RLA    
 _rnd_range                00DB01 RLA    _rnd_seed                 0002FD RLA    
@@ -629,7 +629,7 @@ _saved_rnd_seed           008002  LA    _scratchpad               000881  LA
 _seedArrowPosition        000C89  LA    _seed_inventory           000C7D RLA    
 _seedsThrownType          000CCB  LA    _seedsThrownX             000C8B  LA    
 _seedsThrownY             000CAB  LA    _selected_seed_type       000C7C RLA    
-_setMenuRect              009BAE  LA    _set_msg                  009D31  LA    
+_setMenuRect              009BBF  LA    _set_msg                  009D42  LA    
 _set_note                 00C5F5 RLA    _set_tile                 00CDED RLA    
 _spawn_projectile         0092BF  LA    _stairs_known             00042E  LA    
 _stairs_x                 00042F  LA    _stairs_y                 000430  LA    
@@ -795,13 +795,13 @@ _spawn_projectile         0092BF  LA    _circle_position          009370  LA
 _big_circle               00947A  LA    _draw_battle_screen       00956A RLA    
 _init_battle              00965C RLA    _DesertMap                00967E RLA    
 _draw_battle_screen_postqueue 0096F6 RLA    _update_battle            00979B RLA    
-_BeachMap                 009A7E RLA    _checkLoseCondition       009B80  LA    
-_setMenuRect              009BAE  LA    _renderMenuText           009C4E  LA    
-_set_msg                  009D31  LA    _get_first_party_veggie   009D82  LA    
-_SineTable                009DB1 RLA    _ClearingMap              009E7E RLA    
-_MainMusic                009EB1 RLA    _BattleMusic              009F43 RLA    
-_HeroFrames               00A0D6 RLA    _FontFrames               00A14E RLA    
-_RoadMap                  00A27E RLA    _EnemyFrames_VEGGIES      00A376 RLA    
+_BeachMap                 009A7E RLA    _checkLoseCondition       009B91  LA    
+_setMenuRect              009BBF  LA    _renderMenuText           009C5F  LA    
+_set_msg                  009D42  LA    _get_first_party_veggie   009D93  LA    
+_SineTable                009DC2 RLA    _ClearingMap              009E7E RLA    
+_MainMusic                009EC2 RLA    _BattleMusic              009F54 RLA    
+_HeroFrames               00A0E7 RLA    _FontFrames               00A15F RLA    
+_RoadMap                  00A27E RLA    _EnemyFrames_VEGGIES      00A387 RLA    
 __DATA_LOAD__             00C000 RLA    initlib                   00C257 RLA    
 _wait                     00C263 RLA    _stop                     00C265  LA    
 _nop5                     00C266  LA    _nop10                    00C26C  LA    
@@ -1188,8 +1188,8 @@ _maxHpMessage (enemies.o):
 _maybe_add_pillars (tilemap.o):
 _memcpy (memcpy.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     drawing_funcs.o           build/drawing_funcs.si(1294)
     drawing_funcs.o           build/drawing_funcs.si(1294)
@@ -1475,13 +1475,13 @@ boolult (makebool.o):
 complax (compl.o):
     main.o                    build/main.si(2104)
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
 condes (condes.o):
 copydata (copydata.o):
     crt0.o                    src/crt0.s(13)
 decsp2 (decsp2.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     enemies.o                 build/enemies.si(2768)
     enemies.o                 build/enemies.si(2768)
     enemies.o                 build/enemies.si(2768)
@@ -1491,7 +1491,7 @@ decsp3 (decsp3.o):
     tilemap.o                 build/tilemap.si(2348)
 decsp4 (decsp4.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     enemies.o                 build/enemies.si(2768)
     enemies.o                 build/enemies.si(2768)
     enemies.o                 build/enemies.si(2768)
@@ -1500,14 +1500,14 @@ decsp5 (decsp5.o):
     drawing_funcs.o           build/drawing_funcs.si(1294)
 decsp7 (decsp7.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     enemies.o                 build/enemies.si(2768)
 donelib (condes.o):
     crt0.o                    src/crt0.s(13)
 incsp1 (incsp1.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     banking.o                 build/banking.si(104)
     level.o                   build/level.si(208)
@@ -1542,13 +1542,13 @@ incsp2 (incsp2.o):
     dynawave.o                build/dynawave.si(401)
     dynawave.o                build/dynawave.si(401)
 incsp3 (incsp3.o):
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     enemies.o                 build/enemies.si(2768)
     music.o                   build/music.si(509)
     drawing_funcs.o           build/drawing_funcs.si(1294)
 incsp4 (incsp4.o):
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     random.o                  build/random.si(190)
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
@@ -1636,9 +1636,9 @@ push0 (pushax.o):
 pusha (pusha.o):
     main.o                    build/main.si(2104)
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     vegetables.o              build/vegetables.si(635)
     vegetables.o              build/vegetables.si(635)
@@ -1679,11 +1679,11 @@ pusha (pusha.o):
     dynawave.o                build/dynawave.si(401)
 pusha0 (pushax.o):
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     enemies.o                 build/enemies.si(2768)
     enemies.o                 build/enemies.si(2768)
@@ -1698,8 +1698,8 @@ pushax (pushax.o):
     main.o                    build/main.si(2104)
     main.o                    build/main.si(2104)
     main.o                    build/main.si(2104)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
     level.o                   build/level.si(208)
     enemies.o                 build/enemies.si(2768)
@@ -1840,18 +1840,18 @@ tosmoda0 (mod.o):
 tosmodax (mod.o):
     random.o                  build/random.si(190)
 tosmula0 (mul8.o):
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
+    battle.o                  build/battle.si(1231)
     vegetables.o              build/vegetables.si(635)
 tosora0 (or.o):
     random.o                  build/random.si(190)
 tosorax (or.o):
     main.o                    build/main.si(2104)
 tossuba0 (sub.o):
-    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1231)
     tilemap.o                 build/tilemap.si(2348)
 tossubax (sub.o):
     random.o                  build/random.si(190)

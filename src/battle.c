@@ -258,7 +258,9 @@ unsigned char update_battle(int inputs, int last_inputs) {
                             setMenuRect(MENU_TYPE_MESSAGE);
                             set_msg("Already out!", 0);
                         } else {
-                            player_party[currentPartyIndex] = player_active_veggie;
+                            if(player_active_veggie.hp != 0) {
+                                player_party[currentPartyIndex] = player_active_veggie;
+                            }
                             currentPartyIndex = menu_index;
                             player_active_veggie = player_party[currentPartyIndex];
                             battle_state = BATTLE_STATE_MESSAGE;
@@ -336,7 +338,11 @@ unsigned char update_battle(int inputs, int last_inputs) {
             } else {
                 battle_state = BATTLE_STATE_DECIDE;
                 if(battle_state == BATTLE_STATE_DECIDE) {
+                    if(player_active_veggie.hp == 0) {
                     setMenuRect(MENU_TYPE_PARTY);
+                    } else {
+                        setMenuRect(MENU_TYPE_ACTION);
+                    }
                 }
             }
         }
