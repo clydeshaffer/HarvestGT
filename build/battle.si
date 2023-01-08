@@ -51,6 +51,7 @@
 	.export		_setMenuRect
 	.export		_renderMenuText
 	.export		_set_msg
+	.export		_get_first_party_veggie
 
 .segment	"DATA"
 
@@ -258,16 +259,26 @@ L0006:	rts
 
 	jsr     pusha
 	stz     _menu_index
+	jsr     _get_first_party_veggie
+	sta     _currentPartyIndex
 	lda     #<(_player_active_veggie)
 	ldx     #>(_player_active_veggie)
 	jsr     pushax
-	lda     #<(_player_party)
-	ldx     #>(_player_party)
+	lda     _currentPartyIndex
+	jsr     pusha0
+	lda     #$14
+	jsr     tosmula0
+	clc
+	adc     #<(_player_party)
+	tay
+	txa
+	adc     #>(_player_party)
+	tax
+	tya
 	jsr     pushax
 	ldx     #$00
 	lda     #$14
 	jsr     _memcpy
-	stz     _currentPartyIndex
 	lda     #<(_encountered_veggie)
 	ldx     #>(_encountered_veggie)
 	jsr     pushax
@@ -846,7 +857,7 @@ L002E:	jsr     _checkLoseCondition
 	bra     L0037
 L0046:	ina
 	sta     _battle_state
-	ina
+	lda     #$03
 	jsr     _setMenuRect
 	bra     L0037
 L0047:	lda     _battle_state
@@ -1167,6 +1178,47 @@ L0004:	ldy     #$02
 	lda     #$00
 	sta     _messageBuf,y
 	jmp     incsp3
+
+.endproc
+
+; ---------------------------------------------------------------
+; char __near__ get_first_party_veggie (void)
+; ---------------------------------------------------------------
+
+.segment	"CODE2"
+
+.proc	_get_first_party_veggie: near
+
+.segment	"CODE2"
+
+	stz     M0001
+	ldx     #$00
+L0007:	lda     M0001
+	cmp     #$05
+	bcs     L0009
+	jsr     pusha0
+	lda     #$14
+	jsr     tosmula0
+	sta     ptr1
+	txa
+	clc
+	adc     #>(_player_party)
+	sta     ptr1+1
+	ldy     #<(_player_party)
+	ldx     #$00
+	lda     (ptr1),y
+	beq     L0008
+	lda     M0001
+	rts
+L0008:	inc     M0001
+	bra     L0007
+L0009:	txa
+	rts
+
+.segment	"BSS"
+
+M0001:
+	.res	1,$00
 
 .endproc
 

@@ -3,7 +3,7 @@
 
 #include "coordinate.h"
 
-#define MAX_ENEMIES 4
+#define MAX_ENEMIES 32
 #define MAX_ENEMIES_PER_FRAME 3
 #define ENEMY_TYPE_NUM_SLOTS 6
 #define RESERVED_PROJECTILE_SLOTS 1

@@ -90,17 +90,10 @@ char randomInventorySeed() {
     char i, didprint = 0;
     for(i = 1; i < 12; ++i) {
         if(seed_inventory[i] != 0) {
-            didprint = 1;
+            return i;
         }
     }
-    if(!didprint) {
-        return VEGGIE_TYPE_NONE;
-    }
-    i = 0;
-    while((i == 0) || (seed_inventory[i] == 0)) {
-        i = rnd() % 12;
-    }
-    return i;
+    return VEGGIE_TYPE_NONE;
 }
 
 char last_seed_thrown;

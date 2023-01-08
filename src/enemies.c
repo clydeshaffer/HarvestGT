@@ -231,6 +231,9 @@ void place_enemies() {
                         }
                     }
                     enemy_index_on_screen(i);
+                    if(enemy_count > 5) {
+                        return;
+                    }
                 }
         } while(enemy_count == 0);
     }

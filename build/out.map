@@ -114,371 +114,371 @@ music.o:
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     CODE2             Offs=000493  Size=000229  Align=00001  Fill=0000
 enemies.o:
-    CODE              Offs=001AAD  Size=000558  Align=00001  Fill=0000
+    CODE              Offs=001AAD  Size=00055F  Align=00001  Fill=0000
     RODATA            Offs=000000  Size=000027  Align=00001  Fill=0000
-    BSS               Offs=000558  Size=00007B  Align=00001  Fill=0000
+    BSS               Offs=000558  Size=00023B  Align=00001  Fill=0000
     DATA              Offs=00010A  Size=000017  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     CODE2             Offs=0006BC  Size=000EAE  Align=00001  Fill=0000
 level.o:
-    CODE              Offs=002005  Size=000113  Align=00001  Fill=0000
+    CODE              Offs=00200C  Size=000113  Align=00001  Fill=0000
     RODATA            Offs=000027  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=0005D3  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000793  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000121  Size=000002  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 banking.o:
-    CODE              Offs=002118  Size=0000AF  Align=00001  Fill=0000
+    CODE              Offs=00211F  Size=0000AF  Align=00001  Fill=0000
     RODATA            Offs=000027  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=0005D3  Size=000001  Align=00001  Fill=0000
+    BSS               Offs=000793  Size=000001  Align=00001  Fill=0000
     DATA              Offs=000123  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 savegame.o:
-    CODE              Offs=0021C7  Size=000096  Align=00001  Fill=0000
+    CODE              Offs=0021CE  Size=000096  Align=00001  Fill=0000
     RODATA            Offs=000027  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=0005D4  Size=000005  Align=00001  Fill=0000
+    BSS               Offs=000794  Size=000005  Align=00001  Fill=0000
     DATA              Offs=000123  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     SAVEGAME          Offs=000000  Size=000007  Align=00001  Fill=0000
 vegetables.o:
-    CODE              Offs=00225D  Size=0001CF  Align=00001  Fill=0000
+    CODE              Offs=002264  Size=0001A5  Align=00001  Fill=0000
     RODATA            Offs=000027  Size=00007E  Align=00001  Fill=0000
-    BSS               Offs=0005D9  Size=000104  Align=00001  Fill=0000
+    BSS               Offs=000799  Size=000104  Align=00001  Fill=0000
     DATA              Offs=000123  Size=0000FC  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 battle.o:
-    CODE              Offs=00242C  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=002409  Size=000000  Align=00001  Fill=0000
     RODATA            Offs=0000A5  Size=00006E  Align=00001  Fill=0000
-    BSS               Offs=0006DD  Size=000024  Align=00001  Fill=0000
+    BSS               Offs=00089D  Size=000025  Align=00001  Fill=0000
     DATA              Offs=00021F  Size=000005  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
-    CODE2             Offs=00156A  Size=000804  Align=00001  Fill=0000
+    CODE2             Offs=00156A  Size=000847  Align=00001  Fill=0000
 main.o:
-    CODE              Offs=00242C  Size=001084  Align=00001  Fill=0000
+    CODE              Offs=002409  Size=001090  Align=00001  Fill=0000
     RODATA            Offs=000113  Size=000048  Align=00001  Fill=0000
-    BSS               Offs=000701  Size=00001E  Align=00001  Fill=0000
+    BSS               Offs=0008C2  Size=00001E  Align=00001  Fill=0000
     DATA              Offs=000224  Size=00000E  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(add.o):
-    CODE              Offs=0034B0  Size=00001C  Align=00001  Fill=0000
+    CODE              Offs=003499  Size=00001C  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(addysp.o):
-    CODE              Offs=0034CC  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=0034B5  Size=00000E  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(aslax4.o):
-    CODE              Offs=0034DA  Size=000011  Align=00001  Fill=0000
+    CODE              Offs=0034C3  Size=000011  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(asrax1.o):
-    CODE              Offs=0034EB  Size=00000A  Align=00001  Fill=0000
+    CODE              Offs=0034D4  Size=00000A  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(asrax3.o):
-    CODE              Offs=0034F5  Size=000014  Align=00001  Fill=0000
+    CODE              Offs=0034DE  Size=000014  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(asrax4.o):
-    CODE              Offs=003509  Size=000019  Align=00001  Fill=0000
+    CODE              Offs=0034F2  Size=000019  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(bneg.o):
-    CODE              Offs=003522  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=00350B  Size=00000E  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(compl.o):
-    CODE              Offs=003530  Size=000009  Align=00001  Fill=0000
+    CODE              Offs=003519  Size=000009  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(condes.o):
-    CODE              Offs=003539  Size=00000C  Align=00001  Fill=0000
+    CODE              Offs=003522  Size=00000C  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000232  Size=000025  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
 lib/gametank.lib(copydata.o):
-    CODE              Offs=003545  Size=00002D  Align=00001  Fill=0000
+    CODE              Offs=00352E  Size=00002D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(crt0.o):
-    CODE              Offs=003572  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=00355B  Size=000000  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
     STARTUP           Offs=000000  Size=0000D9  Align=00001  Fill=0000
 lib/gametank.lib(decsp2.o):
-    CODE              Offs=003572  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=00355B  Size=00000D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(decsp3.o):
-    CODE              Offs=00357F  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=003568  Size=00000D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(decsp4.o):
-    CODE              Offs=00358C  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=003575  Size=00000D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(decsp5.o):
-    CODE              Offs=003599  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=003582  Size=00000D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(decsp7.o):
-    CODE              Offs=0035A6  Size=00000D  Align=00001  Fill=0000
+    CODE              Offs=00358F  Size=00000D  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(icmp.o):
-    CODE              Offs=0035B3  Size=00002E  Align=00001  Fill=0000
+    CODE              Offs=00359C  Size=00002E  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp1.o):
-    CODE              Offs=0035E1  Size=000007  Align=00001  Fill=0000
+    CODE              Offs=0035CA  Size=000007  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp2.o):
-    CODE              Offs=0035E8  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=0035D1  Size=000016  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp3.o):
-    CODE              Offs=0035FE  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0035E7  Size=000005  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp4.o):
-    CODE              Offs=003603  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0035EC  Size=000005  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp5.o):
-    CODE              Offs=003608  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0035F1  Size=000005  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp6.o):
-    CODE              Offs=00360D  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0035F6  Size=000005  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(incsp8.o):
-    CODE              Offs=003612  Size=000005  Align=00001  Fill=0000
+    CODE              Offs=0035FB  Size=000005  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(inflatemem.o):
-    CODE              Offs=003617  Size=0001F7  Align=00001  Fill=0000
+    CODE              Offs=003600  Size=0001F7  Align=00001  Fill=0000
     RODATA            Offs=00015B  Size=000020  Align=00001  Fill=0000
-    BSS               Offs=00071F  Size=0002FD  Align=00001  Fill=0000
+    BSS               Offs=0008E0  Size=0002FD  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(ldeaxi.o):
-    CODE              Offs=00380E  Size=000017  Align=00001  Fill=0000
+    CODE              Offs=0037F7  Size=000017  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(makebool.o):
-    CODE              Offs=003825  Size=00002C  Align=00001  Fill=0000
+    CODE              Offs=00380E  Size=00002C  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(memcpy.o):
-    CODE              Offs=003851  Size=00003C  Align=00001  Fill=0000
+    CODE              Offs=00383A  Size=00003C  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(mod.o):
-    CODE              Offs=00388D  Size=000011  Align=00001  Fill=0000
+    CODE              Offs=003876  Size=000011  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(mul8.o):
-    CODE              Offs=00389E  Size=00003A  Align=00001  Fill=0000
+    CODE              Offs=003887  Size=00003A  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(negabs.o):
-    CODE              Offs=0038D8  Size=000012  Align=00001  Fill=0000
+    CODE              Offs=0038C1  Size=000012  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(or.o):
-    CODE              Offs=0038EA  Size=000012  Align=00001  Fill=0000
+    CODE              Offs=0038D3  Size=000012  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(popptr1.o):
-    CODE              Offs=0038FC  Size=00000E  Align=00001  Fill=0000
+    CODE              Offs=0038E5  Size=00000E  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(pusha.o):
-    CODE              Offs=00390A  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=0038F3  Size=000016  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(pushax.o):
-    CODE              Offs=003920  Size=00001A  Align=00001  Fill=0000
+    CODE              Offs=003909  Size=00001A  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(pushwsp.o):
-    CODE              Offs=00393A  Size=00001C  Align=00001  Fill=0000
+    CODE              Offs=003923  Size=00001C  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(shelp.o):
-    CODE              Offs=003956  Size=000020  Align=00001  Fill=0000
+    CODE              Offs=00393F  Size=000020  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(shrax4.o):
-    CODE              Offs=003976  Size=000011  Align=00001  Fill=0000
+    CODE              Offs=00395F  Size=000011  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(staspidx.o):
-    CODE              Offs=003987  Size=000016  Align=00001  Fill=0000
+    CODE              Offs=003970  Size=000016  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(staxsp.o):
-    CODE              Offs=00399D  Size=00000B  Align=00001  Fill=0000
+    CODE              Offs=003986  Size=00000B  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(staxspi.o):
-    CODE              Offs=0039A8  Size=00001B  Align=00001  Fill=0000
+    CODE              Offs=003991  Size=00001B  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(sub.o):
-    CODE              Offs=0039C3  Size=000015  Align=00001  Fill=0000
+    CODE              Offs=0039AC  Size=000015  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(udiv.o):
-    CODE              Offs=0039D8  Size=00004F  Align=00001  Fill=0000
+    CODE              Offs=0039C1  Size=00004F  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(zerobss.o):
-    CODE              Offs=003A27  Size=000023  Align=00001  Fill=0000
+    CODE              Offs=003A10  Size=000023  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=000000  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
 lib/gametank.lib(zeropage.o):
-    CODE              Offs=003A4A  Size=000000  Align=00001  Fill=0000
+    CODE              Offs=003A33  Size=000000  Align=00001  Fill=0000
     RODATA            Offs=00017B  Size=000000  Align=00001  Fill=0000
-    BSS               Offs=000A1C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000BDD  Size=000000  Align=00001  Fill=0000
     DATA              Offs=000257  Size=000000  Align=00001  Fill=0000
     ZEROPAGE          Offs=000006  Size=00001A  Align=00001  Fill=0000
     NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
@@ -491,220 +491,220 @@ Name                   Start     End    Size  Align
 NULL                  000000  000000  000000  00001
 ZEROPAGE              000000  00001F  000020  00001
 DATA                  000200  000456  000257  00001
-BSS                   000457  000E72  000A1C  00001
-CODE2                 008000  009D6D  001D6E  00001
+BSS                   000457  001033  000BDD  00001
+CODE2                 008000  009DB0  001DB1  00001
 LOADONCE              008000  008D82  000D83  00001
 MONSTERS              008000  0083A1  0003A2  00001
 TILES                 008000  00A67D  00267E  00001
 SAVEGAME              008001  008007  000007  00001
-COMMON                009D6E  00A38A  00061D  00001
+COMMON                009DB1  00A3CD  00061D  00001
 ONCE                  00C257  00C262  00000C  00001
-CODE                  00C263  00FCAC  003A4A  00001
-RODATA                00FCAD  00FE27  00017B  00001
-STARTUP               00FE28  00FF00  0000D9  00001
+CODE                  00C263  00FC95  003A33  00001
+RODATA                00FC96  00FE10  00017B  00001
+STARTUP               00FE11  00FEE9  0000D9  00001
 VECTORS               00FFFA  00FFFF  000006  00001
 
 
 Exports list by name:
 ---------------------
-_BattleBG                 0086C0 RLA    _BattleMusic              009F00 RLA    
+_BattleBG                 0086C0 RLA    _BattleMusic              009F43 RLA    
 _BeachMap                 009A7E RLA    _CLB                      00C8C7 RLA    
-_CLS                      00C942  LA    _ChangeRomBank            00E37B RLA    
+_CLS                      00C942  LA    _ChangeRomBank            00E382 RLA    
 _ClearingMap              009E7E RLA    _DesertMap                00967E RLA    
-_DynaWave                 008000 RLA    _EnemyFrames_VEGGIES      00A333 RLA    
+_DynaWave                 008000 RLA    _EnemyFrames_VEGGIES      00A376 RLA    
 _EnemySprites_VEGGIES     008000 RLA    _FillRect                 00C980 RLA    
-_FlushQueue               00C8AD  LA    _FontFrames               00A10B RLA    
+_FlushQueue               00C8AD  LA    _FontFrames               00A14E RLA    
 _FontSprites              008591 RLA    _Forest0Map               008E7E RLA    
-_HeroFrames               00A093 RLA    _HeroSprites              0081FE RLA    
+_HeroFrames               00A0D6 RLA    _HeroSprites              0081FE RLA    
 _HomesteadMap             008A7E RLA    _LD_enemy_index           00C3D1 RLA    
-_MainMusic                009E6E RLA    _MazeMap                  00927E RLA    
+_MainMusic                009EB1 RLA    _MazeMap                  00927E RLA    
 _NextQueue                00C297 RLA    _PackedSprite             008000  LA    
 _QueueFillRect            00C7F7 RLA    _QueuePackedSprite        0080C3 RLA    
 _QueueSpriteRect          00C785 RLA    _RoadMap                  00A27E RLA    
-_ST_enemy_index           00C481 RLA    _SineTable                009D6E RLA    
-_Sleep                    00E730  LA    _SpriteRect               00C9BF  LA    
-_SpriteRectImmediate      00CA34 RLA    _SwitchRomBank            00FE69  LA    
+_ST_enemy_index           00C481 RLA    _SineTable                009DB1 RLA    
+_Sleep                    00E70D  LA    _SpriteRect               00C9BF  LA    
+_SpriteRectImmediate      00CA34 RLA    _SwitchRomBank            00FE52  LA    
 _Tileset_00               008000 RLA    __BSS_LOAD__              000457  LA    
-__BSS_RUN__               000457 RLA    __BSS_SIZE__              000A1C REA    
+__BSS_RUN__               000457 RLA    __BSS_SIZE__              000BDD REA    
 __CARTRAM0_FILEOFFS__     000000  EA    __CARTRAM0_LAST__         008008  LA    
 __CARTRAM0_SIZE__         003FFF  EA    __CARTRAM0_START__        008001  LA    
 __CARTRAM1_FILEOFFS__     000000  EA    __CARTRAM1_LAST__         008000  LA    
 __CARTRAM1_SIZE__         004000  EA    __CARTRAM1_START__        008000  LA    
-__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00FF01 RLA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00FEEA RLA    
 __DATA_LOAD__             00C000 RLA    __DATA_RUN__              000200 RLA    
 __DATA_SIZE__             000257 REA    __DESTRUCTOR_COUNT__      000000 REA    
-__DESTRUCTOR_TABLE__      00FF01 RLA    __RAM_FILEOFFS__          000000  EA    
-__RAM_LAST__              000E73  LA    __RAM_SIZE__              001D00 REA    
+__DESTRUCTOR_TABLE__      00FEEA RLA    __RAM_FILEOFFS__          000000  EA    
+__RAM_LAST__              001034  LA    __RAM_SIZE__              001D00 REA    
 __RAM_START__             000200 RLA    __SAVEGAME_LOAD__         008001  LA    
 __SAVEGAME_RUN__          008001  LA    __SAVEGAME_SIZE__         000007  EA    
 __STACKSIZE__             000800  EA    __STARTUP__               000001 REA    
 __ZEROPAGE_LOAD__         000000  LA    __ZEROPAGE_RUN__          000000  LA    
 __ZEROPAGE_SIZE__         000020  EA    __ZP_FILEOFFS__           000000  EA    
 __ZP_LAST__               000020  LA    __ZP_SIZE__               000100  EA    
-__ZP_START__              000000  LA    _abs                      00FB3B  LA    
-_add_to_party             00E5EA RLA    _anim_state_offsets       000313  LA    
+__ZP_START__              000000  LA    _abs                      00FB24  LA    
+_add_to_party             00E5C7 RLA    _anim_state_offsets       000313  LA    
 _asmTileCopy              00C539 RLA    _attack_names             00033B  LA    
-_attack_sound_for_enemy   00E168  LA    _audio_amplitudes         0002FF  LA    
+_attack_sound_for_enemy   00E16F  LA    _audio_amplitudes         0002FF  LA    
 _audio_params_index       0002F2  LA    _bankflip                 000217 RLA    
-_banksMirror              000219 RLA    _battle_state             000B53  LA    
+_banksMirror              000219 RLA    _battle_state             000D13  LA    
 _big_circle               00947A  LA    _camera_x                 0002F7 RLA    
 _camera_y                 0002F9 RLA    _character_tilemap_check  00CE28 RLA    
-_checkLoseCondition       009B6C  LA    _check_impact_attack      00926A  LA    
+_checkLoseCondition       009B80  LA    _check_impact_attack      00926A  LA    
 _check_player_attack      009131  LA    _circle_position          009370  LA    
 _clear_enemies            00DE7A RLA    _clear_enemy_slots        00DD83 RLA    
-_clear_save               00E4A9 RLA    _clear_spritebank         00C6D6  LA    
-_close_wall_traps         00E184  LA    _currentPartyIndex        000423  LA    
+_clear_save               00E4B0 RLA    _clear_spritebank         00C6D6  LA    
+_close_wall_traps         00E18B  LA    _currentPartyIndex        000423  LA    
 _cursorX                  000463 RLA    _cursorY                  000464 RLA    
 _delay_counter            000305  LA    _do_fill_map              000213 RLA    
 _do_noise_effect          00DC71 RLA    _draw_battle_screen       00956A RLA    
-_draw_battle_screen_postqueue 0096E3 RLA    _draw_enemies             0086BC RLA    
-_draw_fade                00CABF RLA    _draw_hud                 00E8F5  LA    
-_draw_player              00E857  LA    _draw_world               00CEFA RLA    
-_encountered_veggie       000A44 RLA    _enemies                  0009AF RLA    
+_draw_battle_screen_postqueue 0096F6 RLA    _draw_enemies             0086BC RLA    
+_draw_fade                00CABF RLA    _draw_hud                 00E8D2  LA    
+_draw_player              00E834  LA    _draw_world               00CEFA RLA    
+_encountered_veggie       000C04 RLA    _enemies                  0009AF RLA    
 _enemyFrameData           000318  LA    _enemySpriteSheets        00031A  LA    
 _enemy_banks              00031C  LA    _enemy_count              00030E  LA    
 _enemy_index_on_screen    00C347 RLA    _enemy_speeds             000311  LA    
-_enemy_type_flags         000317  LA    _enemy_type_slots         000A01  LA    
-_enemy_type_used_slots    00030F  LA    _exit                     00FE65  LA    
-_face_player              009072  LA    _fill_local_map           00E8F6  LA    
-_fill_whole_map           00EA24  LA    _findSeed                 00E650 RLA    
+_enemy_type_flags         000317  LA    _enemy_type_slots         000BC1  LA    
+_enemy_type_used_slots    00030F  LA    _exit                     00FE4E  LA    
+_face_player              009072  LA    _fill_local_map           00E8D3  LA    
+_fill_whole_map           00EA01  LA    _findSeed                 00E62D RLA    
 _find_start_tile          00D1DB RLA    _flagsMirror              000218 RLA    
 _flush_audio_params       00C5E5 RLA    _frameflag                000215 RLA    
 _frameflip                000216 RLA    _game_over_timer          00042D  LA    
 _game_state               00042C  LA    _generate_map             00818D RLA    
-_go_to_next_level         000431  LA    _ignoreCamera             000310  LA    
-_inflatemem               00F87A RLA    _init                     00FE28 RLA    
-_init_battle              00965C RLA    _init_dynawave            00C56E RLA    
-_init_enemy               00DDCA  LA    _init_game_state          00E760  LA    
-_init_level               00E27B RLA    _init_music               00DBBE RLA    
-_inputs                   000424  LA    _inputs2                  000428  LA    
-_irq_int                  00C282 RLA    _last_attacker_id         0009EF RLA    
-_last_inputs              000426  LA    _last_inputs2             00042A  LA    
-_last_seed_thrown         000ACA RLA    _loadSpecial              00FCAD  LA    
-_load_enemies_for_level   00E26D  LA    _load_enemy_type          00DD10 RLA    
-_load_game_vars           00E45D RLA    _load_map                 00CD5E RLA    
-_load_spritesheet         00C645 RLA    _ls4                      00C532 RLA    
-_ls5                      00C531  LA    _main                     00EB02 RLA    
-_mapMessage               00030A  LA    _map_fill_tile_rect       00D8A3  LA    
-_map_path_h               00D67C  LA    _map_path_v               00D451  LA    
-_max                      00D429  LA    _maxHpMessage             00030C  LA    
-_maybe_add_pillars        00D95D  LA    _memcpy                   00FAB4 RLA    
-_menuEntries              000422  LA    _menuMode                 000B35  LA    
-_menu_index               000B34  LA    _messageBuf               000B3A  LA    
-_message_string           00045F RLA    _min                      00D408  LA    
-_min_room_size            0002FC  LA    _move_frame_mask          000312  LA    
-_music_cursor             000303  LA    _music_for_level          00E268  LA    
-_music_mode               000308  LA    _nextProjectile           00031D  LA    
-_next_battle_state        000B54  LA    _next_enemy_slot          00E12B RLA    
-_nmi_int                  00C277 RLA    _nop10                    00C26C  LA    
-_nop5                     00C266  LA    _open_gates               00E1F6  LA    
-_pause_music              00DCDE  LA    _paused_cursor            000306  LA    
-_paused_delay             0009AA  LA    _pitch_table              00021A  LA    
-_place_enemies            00DF20 RLA    _place_stairs             00DA37  LA    
-_plantedSeed              00E560 RLA    _play_track               00DBC8 RLA    
-_playerVeggieX            000420  LA    _player_action_type       000212 RLA    
-_player_active_veggie     000A30 RLA    _player_anim_dir          00020D RLA    
-_player_anim_flip         00020E RLA    _player_anim_frame        00020C RLA    
-_player_anim_state        000210 RLA    _player_dir_x             000209 RLA    
-_player_dir_y             00020A RLA    _player_dist_check        0091F3  LA    
-_player_face_enemy        008FA2  LA    _player_health            00020F RLA    
-_player_hitbox_damage     00020B RLA    _player_max_health        000211 RLA    
-_player_party             000A58 RLA    _player_state_offsets     000204  LA    
-_player_x                 000200 RLA    _player_y                 000202 RLA    
-_print                    00CC4C RLA    _printBCDnum              00CB32 RLA    
-_print_seed_inventory     00E4C0 RLA    _pushRect                 00C2FE RLA    
-_push_audio_param         00C5B3 RLA    _queue_count              000004 RLZ    
-_queue_end                000003 RLZ    _queue_flags_param        003200 REA    
-_queue_pending            000005 RLZ    _queue_start              000002 RLZ    
-_randomInventorySeed      00E59B RLA    _random_loaded_enemy_slot 00DD9E  LA    
-_random_reduce_rect       00D360  LA    _rect                     003201 REA    
-_renderMenuText           009C3A  LA    _repeat_point             0009A8  LA    
-_repeat_resume_pending    000309  LA    _resetSeeds               00E548  LA    
-_rnd                      00DAB2 RLA    _rnd_range                00DB01 RLA    
-_rnd_seed                 0002FD RLA    _romBankMirror            000A2A RLA    
-_save_game_vars           00E42A  LA    _saved_level_number       008001  LA    
-_saved_magic_number       008006  LA    _saved_player_health      008005  LA    
-_saved_player_max_health  008004  LA    _saved_rnd_seed           008002  LA    
-_scratchpad               000881  LA    _seedArrowPosition        000AC9  LA    
-_seed_inventory           000ABD RLA    _seedsThrownType          000B0B  LA    
-_seedsThrownX             000ACB  LA    _seedsThrownY             000AEB  LA    
-_selected_seed_type       000ABC RLA    _setMenuRect              009B9A  LA    
-_set_msg                  009D1D  LA    _set_note                 00C5F5 RLA    
-_set_tile                 00CDED RLA    _spawn_projectile         0092BF  LA    
-_stairs_known             00042E  LA    _stairs_x                 00042F  LA    
-_stairs_y                 000430  LA    _stateChangeTimer         00041F  LA    
-_stop                     00C265  LA    _stop_music               00DCA1 RLA    
-_switch_tileset           00CD47 RLA    _temp1                    000457 RLA    
-_temp2                    000459 RLA    _temp3                    00045B RLA    
-_temp4                    00045D RLA    _tempEnemy                0009F1 RLA    
-_tempEnemyIndex           0009F0  LA    _temp_frame               000465  LA    
-_temp_msg_counter         000214 RLA    _test_save_magic_number   00E480 RLA    
-_textboxH                 000B39  LA    _textboxW                 000B38  LA    
-_textboxX                 000B36  LA    _textboxY                 000B37  LA    
-_tick_music               008493 RLA    _tile_at                  00CD82 RLA    
-_tile_at_cell             00CDBD RLA    _tile_passmap             0002F3  LA    
-_tilemap_offset           0002FB  LA    _tiles                    00047B RLA    
-_tmpRect                  00087D  LA    _tmpptr_char              00087B  LA    
-_trim_edge_rects          00D26B  LA    _unpause_music            00DCF7  LA    
-_updateInputs             00E68F  LA    _update_battle            009788 RLA    
-_update_enemies           0087E9 RLA    _veggie_names             000323 RLA    
-_veggie_templates         000343 RLA    _wait                     00C263 RLA    
-_wavetable_page           000461  LA    _wildVeggieX              000421  LA    
-_world_map_x              000321 RLA    _world_map_y              000322 RLA    
-_xorshift16               00DB3B  LA    addysp                    00F730 RLA    
-addysp1                   00F72F RLA    aslax4                    00F73D RLA    
-asrax1                    00F74E RLA    asrax3                    00F758 RLA    
-asrax4                    00F76C RLA    bnega                     00F789 RLA    
-bnegax                    00F785  LA    booleq                    00FA8E RLA    
-boolge                    00FA9F  LA    boolgt                    00FA9D  LA    
-boolle                    00FA95  LA    boollt                    00FA97  LA    
-boolne                    00FA88  LA    booluge                   00FAAF  LA    
-boolugt                   00FAAD  LA    boolule                   00FAA5  LA    
-boolult                   00FAA7  LA    complax                   00F793 RLA    
-condes                    000432  LA    copydata                  00F7A8 RLA    
-decsp2                    00F7D5 RLA    decsp3                    00F7E2 RLA    
-decsp4                    00F7EF RLA    decsp5                    00F7FC RLA    
-decsp7                    00F809 RLA    donelib                   00F79C RLA    
-incsp1                    00F844 RLA    incsp2                    00F853 RLA    
-incsp3                    00F861 RLA    incsp4                    00F866 RLA    
-incsp5                    00F86B RLA    incsp6                    00F870 RLA    
-incsp8                    00F875 RLA    initlib                   00C257 RLA    
-ldeaxi                    00FA71 RLA    ldeaxidx                  00FA73  LA    
-memcpy_getparams          00FADD  LA    memcpy_upwards            00FAB7  LA    
-mul8x16                   00FB03  LA    mul8x16a                  00FB0D  LA    
-negax                     00FB3F RLA    popax                     00F84B RLA    
-popptr1                   00FB5F RLA    popsargsudiv16            00FBB9 RLA    
-ptr1                      00000E RLZ    ptr2                      000010 RLZ    
-ptr3                      000012 RLZ    ptr4                      000014 RLZ    
-push0                     00FB83 RLA    pusha                     00FB71 RLA    
-pusha0                    00FB85 RLA    pusha0sp                  00FB6D  LA    
-pushax                    00FB87 RLA    pushaysp                  00FB6F  LA    
-pushw0sp                  00FB9D RLA    pushwysp                  00FB9F RLA    
-regbank                   00001A  LZ    regsave                   00000A  LZ    
-shlax4                    00F73D RLA    shrax4                    00FBD9 RLA    
-sp                        000006 RLZ    sreg                      000008 RLZ    
-staspidx                  00FBEA RLA    stax0sp                   00FC00 RLA    
-staxspidx                 00FC0B RLA    staxysp                   00FC02  LA    
-tmp1                      000016 RLZ    tmp2                      000017 RLZ    
-tmp3                      000018  LZ    tmp4                      000019  LZ    
-tosadda0                  00F713  LA    tosaddax                  00F715 RLA    
-tosicmp                   00F818 RLA    tosicmp0                  00F816 RLA    
-tosmoda0                  00FAF0 RLA    tosmodax                  00FAF2 RLA    
-tosmula0                  00FB01 RLA    tosora0                   00FB4D RLA    
-tosorax                   00FB4F RLA    tossuba0                  00FC26 RLA    
-tossubax                  00FC28 RLA    tosudiva0                 00FC3B  LA    
-tosudivax                 00FC3D  LA    tosumula0                 00FB01  LA    
-udiv16                    00FC4C RLA    zerobss                   00FC8A RLA    
-
+_get_first_party_veggie   009D82  LA    _go_to_next_level         000431  LA    
+_ignoreCamera             000310  LA    _inflatemem               00F863 RLA    
+_init                     00FE11 RLA    _init_battle              00965C RLA    
+_init_dynawave            00C56E RLA    _init_enemy               00DDCA  LA    
+_init_game_state          00E73D  LA    _init_level               00E282 RLA    
+_init_music               00DBBE RLA    _inputs                   000424  LA    
+_inputs2                  000428  LA    _irq_int                  00C282 RLA    
+_last_attacker_id         000BAF RLA    _last_inputs              000426  LA    
+_last_inputs2             00042A  LA    _last_seed_thrown         000C8A RLA    
+_loadSpecial              00FC96  LA    _load_enemies_for_level   00E274  LA    
+_load_enemy_type          00DD10 RLA    _load_game_vars           00E464 RLA    
+_load_map                 00CD5E RLA    _load_spritesheet         00C645 RLA    
+_ls4                      00C532 RLA    _ls5                      00C531  LA    
+_main                     00EADF RLA    _mapMessage               00030A  LA    
+_map_fill_tile_rect       00D8A3  LA    _map_path_h               00D67C  LA    
+_map_path_v               00D451  LA    _max                      00D429  LA    
+_maxHpMessage             00030C  LA    _maybe_add_pillars        00D95D  LA    
+_memcpy                   00FA9D RLA    _menuEntries              000422  LA    
+_menuMode                 000CF5  LA    _menu_index               000CF4  LA    
+_messageBuf               000CFA  LA    _message_string           00045F RLA    
+_min                      00D408  LA    _min_room_size            0002FC  LA    
+_move_frame_mask          000312  LA    _music_cursor             000303  LA    
+_music_for_level          00E26F  LA    _music_mode               000308  LA    
+_nextProjectile           00031D  LA    _next_battle_state        000D14  LA    
+_next_enemy_slot          00E132 RLA    _nmi_int                  00C277 RLA    
+_nop10                    00C26C  LA    _nop5                     00C266  LA    
+_open_gates               00E1FD  LA    _pause_music              00DCDE  LA    
+_paused_cursor            000306  LA    _paused_delay             0009AA  LA    
+_pitch_table              00021A  LA    _place_enemies            00DF20 RLA    
+_place_stairs             00DA37  LA    _plantedSeed              00E567 RLA    
+_play_track               00DBC8 RLA    _playerVeggieX            000420  LA    
+_player_action_type       000212 RLA    _player_active_veggie     000BF0 RLA    
+_player_anim_dir          00020D RLA    _player_anim_flip         00020E RLA    
+_player_anim_frame        00020C RLA    _player_anim_state        000210 RLA    
+_player_dir_x             000209 RLA    _player_dir_y             00020A RLA    
+_player_dist_check        0091F3  LA    _player_face_enemy        008FA2  LA    
+_player_health            00020F RLA    _player_hitbox_damage     00020B RLA    
+_player_max_health        000211 RLA    _player_party             000C18 RLA    
+_player_state_offsets     000204  LA    _player_x                 000200 RLA    
+_player_y                 000202 RLA    _print                    00CC4C RLA    
+_printBCDnum              00CB32 RLA    _print_seed_inventory     00E4C7 RLA    
+_pushRect                 00C2FE RLA    _push_audio_param         00C5B3 RLA    
+_queue_count              000004 RLZ    _queue_end                000003 RLZ    
+_queue_flags_param        003200 REA    _queue_pending            000005 RLZ    
+_queue_start              000002 RLZ    _randomInventorySeed      00E5A2 RLA    
+_random_loaded_enemy_slot 00DD9E  LA    _random_reduce_rect       00D360  LA    
+_rect                     003201 REA    _renderMenuText           009C4E  LA    
+_repeat_point             0009A8  LA    _repeat_resume_pending    000309  LA    
+_resetSeeds               00E54F RLA    _rnd                      00DAB2 RLA    
+_rnd_range                00DB01 RLA    _rnd_seed                 0002FD RLA    
+_romBankMirror            000BEA RLA    _save_game_vars           00E431  LA    
+_saved_level_number       008001  LA    _saved_magic_number       008006  LA    
+_saved_player_health      008005  LA    _saved_player_max_health  008004  LA    
+_saved_rnd_seed           008002  LA    _scratchpad               000881  LA    
+_seedArrowPosition        000C89  LA    _seed_inventory           000C7D RLA    
+_seedsThrownType          000CCB  LA    _seedsThrownX             000C8B  LA    
+_seedsThrownY             000CAB  LA    _selected_seed_type       000C7C RLA    
+_setMenuRect              009BAE  LA    _set_msg                  009D31  LA    
+_set_note                 00C5F5 RLA    _set_tile                 00CDED RLA    
+_spawn_projectile         0092BF  LA    _stairs_known             00042E  LA    
+_stairs_x                 00042F  LA    _stairs_y                 000430  LA    
+_stateChangeTimer         00041F  LA    _stop                     00C265  LA    
+_stop_music               00DCA1 RLA    _switch_tileset           00CD47 RLA    
+_temp1                    000457 RLA    _temp2                    000459 RLA    
+_temp3                    00045B RLA    _temp4                    00045D RLA    
+_tempEnemy                000BB1 RLA    _tempEnemyIndex           000BB0  LA    
+_temp_frame               000465  LA    _temp_msg_counter         000214 RLA    
+_test_save_magic_number   00E487 RLA    _textboxH                 000CF9  LA    
+_textboxW                 000CF8  LA    _textboxX                 000CF6  LA    
+_textboxY                 000CF7  LA    _tick_music               008493 RLA    
+_tile_at                  00CD82 RLA    _tile_at_cell             00CDBD RLA    
+_tile_passmap             0002F3  LA    _tilemap_offset           0002FB  LA    
+_tiles                    00047B RLA    _tmpRect                  00087D  LA    
+_tmpptr_char              00087B  LA    _trim_edge_rects          00D26B  LA    
+_unpause_music            00DCF7  LA    _updateInputs             00E66C  LA    
+_update_battle            00979B RLA    _update_enemies           0087E9 RLA    
+_veggie_names             000323 RLA    _veggie_templates         000343 RLA    
+_wait                     00C263 RLA    _wavetable_page           000461  LA    
+_wildVeggieX              000421  LA    _world_map_x              000321 RLA    
+_world_map_y              000322 RLA    _xorshift16               00DB3B  LA    
+addysp                    00F719 RLA    addysp1                   00F718 RLA    
+aslax4                    00F726 RLA    asrax1                    00F737 RLA    
+asrax3                    00F741 RLA    asrax4                    00F755 RLA    
+bnega                     00F772 RLA    bnegax                    00F76E  LA    
+booleq                    00FA77 RLA    boolge                    00FA88  LA    
+boolgt                    00FA86  LA    boolle                    00FA7E  LA    
+boollt                    00FA80  LA    boolne                    00FA71  LA    
+booluge                   00FA98  LA    boolugt                   00FA96  LA    
+boolule                   00FA8E  LA    boolult                   00FA90  LA    
+complax                   00F77C RLA    condes                    000432  LA    
+copydata                  00F791 RLA    decsp2                    00F7BE RLA    
+decsp3                    00F7CB RLA    decsp4                    00F7D8 RLA    
+decsp5                    00F7E5 RLA    decsp7                    00F7F2 RLA    
+donelib                   00F785 RLA    incsp1                    00F82D RLA    
+incsp2                    00F83C RLA    incsp3                    00F84A RLA    
+incsp4                    00F84F RLA    incsp5                    00F854 RLA    
+incsp6                    00F859 RLA    incsp8                    00F85E RLA    
+initlib                   00C257 RLA    ldeaxi                    00FA5A RLA    
+ldeaxidx                  00FA5C  LA    memcpy_getparams          00FAC6  LA    
+memcpy_upwards            00FAA0  LA    mul8x16                   00FAEC  LA    
+mul8x16a                  00FAF6  LA    negax                     00FB28 RLA    
+popax                     00F834 RLA    popptr1                   00FB48 RLA    
+popsargsudiv16            00FBA2 RLA    ptr1                      00000E RLZ    
+ptr2                      000010 RLZ    ptr3                      000012 RLZ    
+ptr4                      000014 RLZ    push0                     00FB6C RLA    
+pusha                     00FB5A RLA    pusha0                    00FB6E RLA    
+pusha0sp                  00FB56  LA    pushax                    00FB70 RLA    
+pushaysp                  00FB58  LA    pushw0sp                  00FB86 RLA    
+pushwysp                  00FB88 RLA    regbank                   00001A  LZ    
+regsave                   00000A  LZ    shlax4                    00F726 RLA    
+shrax4                    00FBC2 RLA    sp                        000006 RLZ    
+sreg                      000008 RLZ    staspidx                  00FBD3 RLA    
+stax0sp                   00FBE9 RLA    staxspidx                 00FBF4 RLA    
+staxysp                   00FBEB  LA    tmp1                      000016 RLZ    
+tmp2                      000017 RLZ    tmp3                      000018  LZ    
+tmp4                      000019  LZ    tosadda0                  00F6FC  LA    
+tosaddax                  00F6FE RLA    tosicmp                   00F801 RLA    
+tosicmp0                  00F7FF RLA    tosmoda0                  00FAD9 RLA    
+tosmodax                  00FADB RLA    tosmula0                  00FAEA RLA    
+tosora0                   00FB36 RLA    tosorax                   00FB38 RLA    
+tossuba0                  00FC0F RLA    tossubax                  00FC11 RLA    
+tosudiva0                 00FC24  LA    tosudivax                 00FC26  LA    
+tosumula0                 00FAEA  LA    udiv16                    00FC35 RLA    
+zerobss                   00FC73 RLA    
 
 
 Exports list by value:
 ----------------------
+__CARTRAM0_FILEOFFS__     000000  EA    __CARTRAM1_FILEOFFS__     000000  EA    
 __CONSTRUCTOR_COUNT__     000000 REA    __ZP_START__              000000  LA    
 __ZP_FILEOFFS__           000000  EA    __ZEROPAGE_RUN__          000000  LA    
-__ZEROPAGE_LOAD__         000000  LA    __RAM_FILEOFFS__          000000  EA    
-__DESTRUCTOR_COUNT__      000000 REA    __CARTRAM1_FILEOFFS__     000000  EA    
-__CARTRAM0_FILEOFFS__     000000  EA    __STARTUP__               000001 REA    
+__ZEROPAGE_LOAD__         000000  LA    __DESTRUCTOR_COUNT__      000000 REA    
+__RAM_FILEOFFS__          000000  EA    __STARTUP__               000001 REA    
 _queue_start              000002 RLZ    _queue_end                000003 RLZ    
 _queue_count              000004 RLZ    _queue_pending            000005 RLZ    
 sp                        000006 RLZ    __SAVEGAME_SIZE__         000007  EA    
@@ -713,10 +713,10 @@ ptr1                      00000E RLZ    ptr2                      000010 RLZ
 ptr3                      000012 RLZ    ptr4                      000014 RLZ    
 tmp1                      000016 RLZ    tmp2                      000017 RLZ    
 tmp3                      000018  LZ    tmp4                      000019  LZ    
-regbank                   00001A  LZ    __ZEROPAGE_SIZE__         000020  EA    
-__ZP_LAST__               000020  LA    __ZP_SIZE__               000100  EA    
-__RAM_START__             000200 RLA    __DATA_RUN__              000200 RLA    
-_player_x                 000200 RLA    _player_y                 000202 RLA    
+regbank                   00001A  LZ    __ZP_LAST__               000020  LA    
+__ZEROPAGE_SIZE__         000020  EA    __ZP_SIZE__               000100  EA    
+__RAM_START__             000200 RLA    _player_x                 000200 RLA    
+__DATA_RUN__              000200 RLA    _player_y                 000202 RLA    
 _player_state_offsets     000204  LA    _player_dir_x             000209 RLA    
 _player_dir_y             00020A RLA    _player_hitbox_damage     00020B RLA    
 _player_anim_frame        00020C RLA    _player_anim_dir          00020D RLA    
@@ -750,8 +750,8 @@ _inputs2                  000428  LA    _last_inputs2             00042A  LA
 _game_state               00042C  LA    _game_over_timer          00042D  LA    
 _stairs_known             00042E  LA    _stairs_x                 00042F  LA    
 _stairs_y                 000430  LA    _go_to_next_level         000431  LA    
-condes                    000432  LA    __BSS_RUN__               000457 RLA    
-__BSS_LOAD__              000457  LA    _temp1                    000457 RLA    
+condes                    000432  LA    _temp1                    000457 RLA    
+__BSS_LOAD__              000457  LA    __BSS_RUN__               000457 RLA    
 _temp2                    000459 RLA    _temp3                    00045B RLA    
 _temp4                    00045D RLA    _message_string           00045F RLA    
 _wavetable_page           000461  LA    _cursorX                  000463 RLA    
@@ -760,26 +760,26 @@ _tiles                    00047B RLA    __STACKSIZE__             000800  EA
 _tmpptr_char              00087B  LA    _tmpRect                  00087D  LA    
 _scratchpad               000881  LA    _repeat_point             0009A8  LA    
 _paused_delay             0009AA  LA    _enemies                  0009AF RLA    
-_last_attacker_id         0009EF RLA    _tempEnemyIndex           0009F0  LA    
-_tempEnemy                0009F1 RLA    _enemy_type_slots         000A01  LA    
-__BSS_SIZE__              000A1C REA    _romBankMirror            000A2A RLA    
-_player_active_veggie     000A30 RLA    _encountered_veggie       000A44 RLA    
-_player_party             000A58 RLA    _selected_seed_type       000ABC RLA    
-_seed_inventory           000ABD RLA    _seedArrowPosition        000AC9  LA    
-_last_seed_thrown         000ACA RLA    _seedsThrownX             000ACB  LA    
-_seedsThrownY             000AEB  LA    _seedsThrownType          000B0B  LA    
-_menu_index               000B34  LA    _menuMode                 000B35  LA    
-_textboxX                 000B36  LA    _textboxY                 000B37  LA    
-_textboxW                 000B38  LA    _textboxH                 000B39  LA    
-_messageBuf               000B3A  LA    _battle_state             000B53  LA    
-_next_battle_state        000B54  LA    __RAM_LAST__              000E73  LA    
+_last_attacker_id         000BAF RLA    _tempEnemyIndex           000BB0  LA    
+_tempEnemy                000BB1 RLA    _enemy_type_slots         000BC1  LA    
+__BSS_SIZE__              000BDD REA    _romBankMirror            000BEA RLA    
+_player_active_veggie     000BF0 RLA    _encountered_veggie       000C04 RLA    
+_player_party             000C18 RLA    _selected_seed_type       000C7C RLA    
+_seed_inventory           000C7D RLA    _seedArrowPosition        000C89  LA    
+_last_seed_thrown         000C8A RLA    _seedsThrownX             000C8B  LA    
+_seedsThrownY             000CAB  LA    _seedsThrownType          000CCB  LA    
+_menu_index               000CF4  LA    _menuMode                 000CF5  LA    
+_textboxX                 000CF6  LA    _textboxY                 000CF7  LA    
+_textboxW                 000CF8  LA    _textboxH                 000CF9  LA    
+_messageBuf               000CFA  LA    _battle_state             000D13  LA    
+_next_battle_state        000D14  LA    __RAM_LAST__              001034  LA    
 __RAM_SIZE__              001D00 REA    _queue_flags_param        003200 REA    
 _rect                     003201 REA    __CARTRAM0_SIZE__         003FFF  EA    
-__CARTRAM1_SIZE__         004000  EA    __CARTRAM1_START__        008000  LA    
-_EnemySprites_VEGGIES     008000 RLA    _Tileset_00               008000 RLA    
-__CARTRAM1_LAST__         008000  LA    _PackedSprite             008000  LA    
-_DynaWave                 008000 RLA    __SAVEGAME_RUN__          008001  LA    
-__CARTRAM0_START__        008001  LA    __SAVEGAME_LOAD__         008001  LA    
+__CARTRAM1_SIZE__         004000  EA    _Tileset_00               008000 RLA    
+__CARTRAM1_LAST__         008000  LA    _EnemySprites_VEGGIES     008000 RLA    
+__CARTRAM1_START__        008000  LA    _DynaWave                 008000 RLA    
+_PackedSprite             008000  LA    __SAVEGAME_LOAD__         008001  LA    
+__CARTRAM0_START__        008001  LA    __SAVEGAME_RUN__          008001  LA    
 _saved_level_number       008001  LA    _saved_rnd_seed           008002  LA    
 _saved_player_max_health  008004  LA    _saved_player_health      008005  LA    
 _saved_magic_number       008006  LA    __CARTRAM0_LAST__         008008  LA    
@@ -794,101 +794,101 @@ _check_impact_attack      00926A  LA    _MazeMap                  00927E RLA
 _spawn_projectile         0092BF  LA    _circle_position          009370  LA    
 _big_circle               00947A  LA    _draw_battle_screen       00956A RLA    
 _init_battle              00965C RLA    _DesertMap                00967E RLA    
-_draw_battle_screen_postqueue 0096E3 RLA    _update_battle            009788 RLA    
-_BeachMap                 009A7E RLA    _checkLoseCondition       009B6C  LA    
-_setMenuRect              009B9A  LA    _renderMenuText           009C3A  LA    
-_set_msg                  009D1D  LA    _SineTable                009D6E RLA    
-_MainMusic                009E6E RLA    _ClearingMap              009E7E RLA    
-_BattleMusic              009F00 RLA    _HeroFrames               00A093 RLA    
-_FontFrames               00A10B RLA    _RoadMap                  00A27E RLA    
-_EnemyFrames_VEGGIES      00A333 RLA    __DATA_LOAD__             00C000 RLA    
-initlib                   00C257 RLA    _wait                     00C263 RLA    
-_stop                     00C265  LA    _nop5                     00C266  LA    
-_nop10                    00C26C  LA    _nmi_int                  00C277 RLA    
-_irq_int                  00C282 RLA    _NextQueue                00C297 RLA    
-_pushRect                 00C2FE RLA    _enemy_index_on_screen    00C347 RLA    
-_LD_enemy_index           00C3D1 RLA    _ST_enemy_index           00C481 RLA    
-_ls5                      00C531  LA    _ls4                      00C532 RLA    
-_asmTileCopy              00C539 RLA    _init_dynawave            00C56E RLA    
-_push_audio_param         00C5B3 RLA    _flush_audio_params       00C5E5 RLA    
-_set_note                 00C5F5 RLA    _load_spritesheet         00C645 RLA    
-_clear_spritebank         00C6D6  LA    _QueueSpriteRect          00C785 RLA    
-_QueueFillRect            00C7F7 RLA    _FlushQueue               00C8AD  LA    
-_CLB                      00C8C7 RLA    _CLS                      00C942  LA    
-_FillRect                 00C980 RLA    _SpriteRect               00C9BF  LA    
-_SpriteRectImmediate      00CA34 RLA    _draw_fade                00CABF RLA    
-_printBCDnum              00CB32 RLA    _print                    00CC4C RLA    
-_switch_tileset           00CD47 RLA    _load_map                 00CD5E RLA    
-_tile_at                  00CD82 RLA    _tile_at_cell             00CDBD RLA    
-_set_tile                 00CDED RLA    _character_tilemap_check  00CE28 RLA    
-_draw_world               00CEFA RLA    _find_start_tile          00D1DB RLA    
-_trim_edge_rects          00D26B  LA    _random_reduce_rect       00D360  LA    
-_min                      00D408  LA    _max                      00D429  LA    
-_map_path_v               00D451  LA    _map_path_h               00D67C  LA    
-_map_fill_tile_rect       00D8A3  LA    _maybe_add_pillars        00D95D  LA    
-_place_stairs             00DA37  LA    _rnd                      00DAB2 RLA    
-_rnd_range                00DB01 RLA    _xorshift16               00DB3B  LA    
-_init_music               00DBBE RLA    _play_track               00DBC8 RLA    
-_do_noise_effect          00DC71 RLA    _stop_music               00DCA1 RLA    
-_pause_music              00DCDE  LA    _unpause_music            00DCF7  LA    
-_load_enemy_type          00DD10 RLA    _clear_enemy_slots        00DD83 RLA    
-_random_loaded_enemy_slot 00DD9E  LA    _init_enemy               00DDCA  LA    
-_clear_enemies            00DE7A RLA    _place_enemies            00DF20 RLA    
-_next_enemy_slot          00E12B RLA    _attack_sound_for_enemy   00E168  LA    
-_close_wall_traps         00E184  LA    _open_gates               00E1F6  LA    
-_music_for_level          00E268  LA    _load_enemies_for_level   00E26D  LA    
-_init_level               00E27B RLA    _ChangeRomBank            00E37B RLA    
-_save_game_vars           00E42A  LA    _load_game_vars           00E45D RLA    
-_test_save_magic_number   00E480 RLA    _clear_save               00E4A9 RLA    
-_print_seed_inventory     00E4C0 RLA    _resetSeeds               00E548  LA    
-_plantedSeed              00E560 RLA    _randomInventorySeed      00E59B RLA    
-_add_to_party             00E5EA RLA    _findSeed                 00E650 RLA    
-_updateInputs             00E68F  LA    _Sleep                    00E730  LA    
-_init_game_state          00E760  LA    _draw_player              00E857  LA    
-_draw_hud                 00E8F5  LA    _fill_local_map           00E8F6  LA    
-_fill_whole_map           00EA24  LA    _main                     00EB02 RLA    
-tosadda0                  00F713  LA    tosaddax                  00F715 RLA    
-addysp1                   00F72F RLA    addysp                    00F730 RLA    
-aslax4                    00F73D RLA    shlax4                    00F73D RLA    
-asrax1                    00F74E RLA    asrax3                    00F758 RLA    
-asrax4                    00F76C RLA    bnegax                    00F785  LA    
-bnega                     00F789 RLA    complax                   00F793 RLA    
-donelib                   00F79C RLA    copydata                  00F7A8 RLA    
-decsp2                    00F7D5 RLA    decsp3                    00F7E2 RLA    
-decsp4                    00F7EF RLA    decsp5                    00F7FC RLA    
-decsp7                    00F809 RLA    tosicmp0                  00F816 RLA    
-tosicmp                   00F818 RLA    incsp1                    00F844 RLA    
-popax                     00F84B RLA    incsp2                    00F853 RLA    
-incsp3                    00F861 RLA    incsp4                    00F866 RLA    
-incsp5                    00F86B RLA    incsp6                    00F870 RLA    
-incsp8                    00F875 RLA    _inflatemem               00F87A RLA    
-ldeaxi                    00FA71 RLA    ldeaxidx                  00FA73  LA    
-boolne                    00FA88  LA    booleq                    00FA8E RLA    
-boolle                    00FA95  LA    boollt                    00FA97  LA    
-boolgt                    00FA9D  LA    boolge                    00FA9F  LA    
-boolule                   00FAA5  LA    boolult                   00FAA7  LA    
-boolugt                   00FAAD  LA    booluge                   00FAAF  LA    
-_memcpy                   00FAB4 RLA    memcpy_upwards            00FAB7  LA    
-memcpy_getparams          00FADD  LA    tosmoda0                  00FAF0 RLA    
-tosmodax                  00FAF2 RLA    tosmula0                  00FB01 RLA    
-tosumula0                 00FB01  LA    mul8x16                   00FB03  LA    
-mul8x16a                  00FB0D  LA    _abs                      00FB3B  LA    
-negax                     00FB3F RLA    tosora0                   00FB4D RLA    
-tosorax                   00FB4F RLA    popptr1                   00FB5F RLA    
-pusha0sp                  00FB6D  LA    pushaysp                  00FB6F  LA    
-pusha                     00FB71 RLA    push0                     00FB83 RLA    
-pusha0                    00FB85 RLA    pushax                    00FB87 RLA    
-pushw0sp                  00FB9D RLA    pushwysp                  00FB9F RLA    
-popsargsudiv16            00FBB9 RLA    shrax4                    00FBD9 RLA    
-staspidx                  00FBEA RLA    stax0sp                   00FC00 RLA    
-staxysp                   00FC02  LA    staxspidx                 00FC0B RLA    
-tossuba0                  00FC26 RLA    tossubax                  00FC28 RLA    
-tosudiva0                 00FC3B  LA    tosudivax                 00FC3D  LA    
-udiv16                    00FC4C RLA    zerobss                   00FC8A RLA    
-_loadSpecial              00FCAD  LA    _init                     00FE28 RLA    
-_exit                     00FE65  LA    _SwitchRomBank            00FE69  LA    
-__CONSTRUCTOR_TABLE__     00FF01 RLA    __DESTRUCTOR_TABLE__      00FF01 RLA    
-
+_draw_battle_screen_postqueue 0096F6 RLA    _update_battle            00979B RLA    
+_BeachMap                 009A7E RLA    _checkLoseCondition       009B80  LA    
+_setMenuRect              009BAE  LA    _renderMenuText           009C4E  LA    
+_set_msg                  009D31  LA    _get_first_party_veggie   009D82  LA    
+_SineTable                009DB1 RLA    _ClearingMap              009E7E RLA    
+_MainMusic                009EB1 RLA    _BattleMusic              009F43 RLA    
+_HeroFrames               00A0D6 RLA    _FontFrames               00A14E RLA    
+_RoadMap                  00A27E RLA    _EnemyFrames_VEGGIES      00A376 RLA    
+__DATA_LOAD__             00C000 RLA    initlib                   00C257 RLA    
+_wait                     00C263 RLA    _stop                     00C265  LA    
+_nop5                     00C266  LA    _nop10                    00C26C  LA    
+_nmi_int                  00C277 RLA    _irq_int                  00C282 RLA    
+_NextQueue                00C297 RLA    _pushRect                 00C2FE RLA    
+_enemy_index_on_screen    00C347 RLA    _LD_enemy_index           00C3D1 RLA    
+_ST_enemy_index           00C481 RLA    _ls5                      00C531  LA    
+_ls4                      00C532 RLA    _asmTileCopy              00C539 RLA    
+_init_dynawave            00C56E RLA    _push_audio_param         00C5B3 RLA    
+_flush_audio_params       00C5E5 RLA    _set_note                 00C5F5 RLA    
+_load_spritesheet         00C645 RLA    _clear_spritebank         00C6D6  LA    
+_QueueSpriteRect          00C785 RLA    _QueueFillRect            00C7F7 RLA    
+_FlushQueue               00C8AD  LA    _CLB                      00C8C7 RLA    
+_CLS                      00C942  LA    _FillRect                 00C980 RLA    
+_SpriteRect               00C9BF  LA    _SpriteRectImmediate      00CA34 RLA    
+_draw_fade                00CABF RLA    _printBCDnum              00CB32 RLA    
+_print                    00CC4C RLA    _switch_tileset           00CD47 RLA    
+_load_map                 00CD5E RLA    _tile_at                  00CD82 RLA    
+_tile_at_cell             00CDBD RLA    _set_tile                 00CDED RLA    
+_character_tilemap_check  00CE28 RLA    _draw_world               00CEFA RLA    
+_find_start_tile          00D1DB RLA    _trim_edge_rects          00D26B  LA    
+_random_reduce_rect       00D360  LA    _min                      00D408  LA    
+_max                      00D429  LA    _map_path_v               00D451  LA    
+_map_path_h               00D67C  LA    _map_fill_tile_rect       00D8A3  LA    
+_maybe_add_pillars        00D95D  LA    _place_stairs             00DA37  LA    
+_rnd                      00DAB2 RLA    _rnd_range                00DB01 RLA    
+_xorshift16               00DB3B  LA    _init_music               00DBBE RLA    
+_play_track               00DBC8 RLA    _do_noise_effect          00DC71 RLA    
+_stop_music               00DCA1 RLA    _pause_music              00DCDE  LA    
+_unpause_music            00DCF7  LA    _load_enemy_type          00DD10 RLA    
+_clear_enemy_slots        00DD83 RLA    _random_loaded_enemy_slot 00DD9E  LA    
+_init_enemy               00DDCA  LA    _clear_enemies            00DE7A RLA    
+_place_enemies            00DF20 RLA    _next_enemy_slot          00E132 RLA    
+_attack_sound_for_enemy   00E16F  LA    _close_wall_traps         00E18B  LA    
+_open_gates               00E1FD  LA    _music_for_level          00E26F  LA    
+_load_enemies_for_level   00E274  LA    _init_level               00E282 RLA    
+_ChangeRomBank            00E382 RLA    _save_game_vars           00E431  LA    
+_load_game_vars           00E464 RLA    _test_save_magic_number   00E487 RLA    
+_clear_save               00E4B0 RLA    _print_seed_inventory     00E4C7 RLA    
+_resetSeeds               00E54F RLA    _plantedSeed              00E567 RLA    
+_randomInventorySeed      00E5A2 RLA    _add_to_party             00E5C7 RLA    
+_findSeed                 00E62D RLA    _updateInputs             00E66C  LA    
+_Sleep                    00E70D  LA    _init_game_state          00E73D  LA    
+_draw_player              00E834  LA    _draw_hud                 00E8D2  LA    
+_fill_local_map           00E8D3  LA    _fill_whole_map           00EA01  LA    
+_main                     00EADF RLA    tosadda0                  00F6FC  LA    
+tosaddax                  00F6FE RLA    addysp1                   00F718 RLA    
+addysp                    00F719 RLA    aslax4                    00F726 RLA    
+shlax4                    00F726 RLA    asrax1                    00F737 RLA    
+asrax3                    00F741 RLA    asrax4                    00F755 RLA    
+bnegax                    00F76E  LA    bnega                     00F772 RLA    
+complax                   00F77C RLA    donelib                   00F785 RLA    
+copydata                  00F791 RLA    decsp2                    00F7BE RLA    
+decsp3                    00F7CB RLA    decsp4                    00F7D8 RLA    
+decsp5                    00F7E5 RLA    decsp7                    00F7F2 RLA    
+tosicmp0                  00F7FF RLA    tosicmp                   00F801 RLA    
+incsp1                    00F82D RLA    popax                     00F834 RLA    
+incsp2                    00F83C RLA    incsp3                    00F84A RLA    
+incsp4                    00F84F RLA    incsp5                    00F854 RLA    
+incsp6                    00F859 RLA    incsp8                    00F85E RLA    
+_inflatemem               00F863 RLA    ldeaxi                    00FA5A RLA    
+ldeaxidx                  00FA5C  LA    boolne                    00FA71  LA    
+booleq                    00FA77 RLA    boolle                    00FA7E  LA    
+boollt                    00FA80  LA    boolgt                    00FA86  LA    
+boolge                    00FA88  LA    boolule                   00FA8E  LA    
+boolult                   00FA90  LA    boolugt                   00FA96  LA    
+booluge                   00FA98  LA    _memcpy                   00FA9D RLA    
+memcpy_upwards            00FAA0  LA    memcpy_getparams          00FAC6  LA    
+tosmoda0                  00FAD9 RLA    tosmodax                  00FADB RLA    
+tosumula0                 00FAEA  LA    tosmula0                  00FAEA RLA    
+mul8x16                   00FAEC  LA    mul8x16a                  00FAF6  LA    
+_abs                      00FB24  LA    negax                     00FB28 RLA    
+tosora0                   00FB36 RLA    tosorax                   00FB38 RLA    
+popptr1                   00FB48 RLA    pusha0sp                  00FB56  LA    
+pushaysp                  00FB58  LA    pusha                     00FB5A RLA    
+push0                     00FB6C RLA    pusha0                    00FB6E RLA    
+pushax                    00FB70 RLA    pushw0sp                  00FB86 RLA    
+pushwysp                  00FB88 RLA    popsargsudiv16            00FBA2 RLA    
+shrax4                    00FBC2 RLA    staspidx                  00FBD3 RLA    
+stax0sp                   00FBE9 RLA    staxysp                   00FBEB  LA    
+staxspidx                 00FBF4 RLA    tossuba0                  00FC0F RLA    
+tossubax                  00FC11 RLA    tosudiva0                 00FC24  LA    
+tosudivax                 00FC26  LA    udiv16                    00FC35 RLA    
+zerobss                   00FC73 RLA    _loadSpecial              00FC96  LA    
+_init                     00FE11 RLA    _exit                     00FE4E  LA    
+_SwitchRomBank            00FE52  LA    __CONSTRUCTOR_TABLE__     00FEEA RLA    
+__DESTRUCTOR_TABLE__      00FEEA RLA    
 
 
 Imports list:
@@ -1114,7 +1114,7 @@ _face_player (enemies.o):
 _fill_local_map (main.o):
 _fill_whole_map (main.o):
 _findSeed (vegetables.o):
-    main.o                    build/main.si(94)
+    main.o                    build/main.si(95)
 _find_start_tile (tilemap.o):
     level.o                   build/level.si(21)
 _flagsMirror (gametank.o):
@@ -1133,6 +1133,7 @@ _game_over_timer (main.o):
 _game_state (main.o):
 _generate_map (tilemap.o):
     main.o                    build/main.si(57)
+_get_first_party_veggie (battle.o):
 _go_to_next_level (main.o):
 _ignoreCamera (enemies.o):
 _inflatemem (inflatemem.o):
@@ -1186,10 +1187,10 @@ _max (tilemap.o):
 _maxHpMessage (enemies.o):
 _maybe_add_pillars (tilemap.o):
 _memcpy (memcpy.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
     drawing_funcs.o           build/drawing_funcs.si(1294)
     drawing_funcs.o           build/drawing_funcs.si(1294)
     drawing_funcs.o           build/drawing_funcs.si(1294)
@@ -1224,7 +1225,7 @@ _place_enemies (enemies.o):
     level.o                   build/level.si(16)
 _place_stairs (tilemap.o):
 _plantedSeed (vegetables.o):
-    main.o                    build/main.si(92)
+    main.o                    build/main.si(93)
 _play_track (music.o):
     main.o                    build/main.si(64)
 _playerVeggieX (battle.o):
@@ -1309,7 +1310,7 @@ _queue_start (drawing_funcs.o):
     main.o                    build/main.si(44)
     interrupt.o               src/interrupt.s(11)
 _randomInventorySeed (vegetables.o):
-    main.o                    build/main.si(93)
+    main.o                    build/main.si(94)
 _random_loaded_enemy_slot (enemies.o):
 _random_reduce_rect (tilemap.o):
 _rect (draw_util.o):
@@ -1321,9 +1322,9 @@ _renderMenuText (battle.o):
 _repeat_point (music.o):
 _repeat_resume_pending (music.o):
 _resetSeeds (vegetables.o):
+    main.o                    build/main.si(92)
 _rnd (random.o):
     main.o                    build/main.si(62)
-    vegetables.o              build/vegetables.si(33)
     enemies.o                 build/enemies.si(56)
 _rnd_range (random.o):
     tilemap.o                 build/tilemap.si(30)
@@ -1413,7 +1414,7 @@ _veggie_templates (vegetables.o):
     main.o                    build/main.si(86)
     battle.o                  build/battle.si(31)
 _wait (wait.o):
-    main.o                    build/main.si(99)
+    main.o                    build/main.si(100)
     drawing_funcs.o           build/drawing_funcs.si(43)
 _wavetable_page (dynawave.o):
 _wildVeggieX (battle.o):
@@ -1432,13 +1433,13 @@ addysp1 (addysp.o):
     sub.o                     runtime/sub.s(8)
     or.o                      runtime/or.s(9)
 aslax4 (aslax4.o):
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     random.o                  build/random.si(190)
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
@@ -1449,15 +1450,15 @@ aslax4 (aslax4.o):
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
 asrax1 (asrax1.o):
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
 asrax3 (asrax3.o):
     random.o                  build/random.si(190)
 asrax4 (asrax4.o):
     random.o                  build/random.si(190)
 bnega (bneg.o):
     banking.o                 build/banking.si(104)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
 bnegax (bneg.o):
 booleq (makebool.o):
     savegame.o                build/savegame.si(169)
@@ -1472,49 +1473,49 @@ boolugt (makebool.o):
 boolule (makebool.o):
 boolult (makebool.o):
 complax (compl.o):
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
 condes (condes.o):
 copydata (copydata.o):
     crt0.o                    src/crt0.s(13)
 decsp2 (decsp2.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
 decsp3 (decsp3.o):
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
 decsp4 (decsp4.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     drawing_funcs.o           build/drawing_funcs.si(1294)
 decsp5 (decsp5.o):
     drawing_funcs.o           build/drawing_funcs.si(1294)
 decsp7 (decsp7.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    enemies.o                 build/enemies.si(2768)
 donelib (condes.o):
     crt0.o                    src/crt0.s(13)
 incsp1 (incsp1.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
     banking.o                 build/banking.si(104)
     level.o                   build/level.si(208)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
     drawing_funcs.o           build/drawing_funcs.si(1294)
     drawing_funcs.o           build/drawing_funcs.si(1294)
@@ -1526,8 +1527,8 @@ incsp2 (incsp2.o):
     staspidx.o                runtime/staspidx.s(8)
     popptr1.o                 runtime/popptr1.s(8)
     inflatemem.o              zlib/inflatemem.s(14)
-    main.o                    build/main.si(2099)
-    vegetables.o              build/vegetables.si(653)
+    main.o                    build/main.si(2104)
+    vegetables.o              build/vegetables.si(635)
     level.o                   build/level.si(208)
     music.o                   build/music.si(509)
     random.o                  build/random.si(190)
@@ -1541,13 +1542,13 @@ incsp2 (incsp2.o):
     dynawave.o                build/dynawave.si(401)
     dynawave.o                build/dynawave.si(401)
 incsp3 (incsp3.o):
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
-    enemies.o                 build/enemies.si(2765)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
+    enemies.o                 build/enemies.si(2768)
     music.o                   build/music.si(509)
     drawing_funcs.o           build/drawing_funcs.si(1294)
 incsp4 (incsp4.o):
-    battle.o                  build/battle.si(1172)
+    battle.o                  build/battle.si(1224)
     random.o                  build/random.si(190)
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
@@ -1558,9 +1559,9 @@ incsp4 (incsp4.o):
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
 incsp5 (incsp5.o):
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
     drawing_funcs.o           build/drawing_funcs.si(1294)
     drawing_funcs.o           build/drawing_funcs.si(1294)
@@ -1581,11 +1582,11 @@ mul8x16a (mul8.o):
 negax (negabs.o):
     shelp.o                   runtime/shelp.s(11)
     mod.o                     runtime/mod.s(11)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
 popax (incsp2.o):
     shelp.o                   runtime/shelp.s(11)
     memcpy.o                  common/memcpy.s(14)
@@ -1633,28 +1634,28 @@ push0 (pushax.o):
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
 pusha (pusha.o):
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
-    vegetables.o              build/vegetables.si(653)
-    vegetables.o              build/vegetables.si(653)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
+    vegetables.o              build/vegetables.si(635)
+    vegetables.o              build/vegetables.si(635)
     banking.o                 build/banking.si(104)
     level.o                   build/level.si(208)
     level.o                   build/level.si(208)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     music.o                   build/music.si(509)
     music.o                   build/music.si(509)
     music.o                   build/music.si(509)
@@ -1677,14 +1678,15 @@ pusha (pusha.o):
     dynawave.o                build/dynawave.si(401)
     dynawave.o                build/dynawave.si(401)
 pusha0 (pushax.o):
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
@@ -1692,22 +1694,21 @@ pusha0 (pushax.o):
     tilemap.o                 build/tilemap.si(2348)
 pusha0sp (pusha.o):
 pushax (pushax.o):
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    main.o                    build/main.si(2099)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
-    vegetables.o              build/vegetables.si(653)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    main.o                    build/main.si(2104)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
     level.o                   build/level.si(208)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     random.o                  build/random.si(190)
     random.o                  build/random.si(190)
     tilemap.o                 build/tilemap.si(2348)
@@ -1744,8 +1745,8 @@ shlax4 (aslax4.o):
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
 shrax4 (shrax4.o):
-    main.o                    build/main.si(2099)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
 sp (zeropage.o):
     addysp.o                  runtime/addysp.s(8)
@@ -1791,12 +1792,12 @@ sreg (zeropage.o):
     enemies.o                 build/enemies.si(10)
     tilemap.o                 build/tilemap.si(10)
 staspidx (staspidx.o):
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
 stax0sp (staxsp.o):
     random.o                  build/random.si(190)
 staxspidx (staxspi.o):
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
 staxysp (staxsp.o):
 tmp1 (zeropage.o):
     copydata.o                common/copydata.s(9)
@@ -1826,31 +1827,31 @@ tosaddax (add.o):
     tilemap.o                 build/tilemap.si(2348)
     tilemap.o                 build/tilemap.si(2348)
 tosicmp (icmp.o):
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
     tilemap.o                 build/tilemap.si(2348)
 tosicmp0 (icmp.o):
-    enemies.o                 build/enemies.si(2765)
+    enemies.o                 build/enemies.si(2768)
 tosmoda0 (mod.o):
-    main.o                    build/main.si(2099)
-    vegetables.o              build/vegetables.si(653)
-    enemies.o                 build/enemies.si(2765)
-    enemies.o                 build/enemies.si(2765)
+    main.o                    build/main.si(2104)
+    enemies.o                 build/enemies.si(2768)
+    enemies.o                 build/enemies.si(2768)
 tosmodax (mod.o):
     random.o                  build/random.si(190)
 tosmula0 (mul8.o):
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    battle.o                  build/battle.si(1172)
-    vegetables.o              build/vegetables.si(653)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    battle.o                  build/battle.si(1224)
+    vegetables.o              build/vegetables.si(635)
 tosora0 (or.o):
     random.o                  build/random.si(190)
 tosorax (or.o):
-    main.o                    build/main.si(2099)
+    main.o                    build/main.si(2104)
 tossuba0 (sub.o):
-    battle.o                  build/battle.si(1172)
+    battle.o                  build/battle.si(1224)
     tilemap.o                 build/tilemap.si(2348)
 tossubax (sub.o):
     random.o                  build/random.si(190)

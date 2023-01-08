@@ -181,10 +181,20 @@ void set_msg(char* newMsg, char i) {
     messageBuf[i] = 0;
 }
 
+char get_first_party_veggie() {
+    char i;
+    for(i = 0; i < 5; ++i) {
+        if(player_party[i].type != VEGGIE_TYPE_NONE) {
+            return i;
+        }
+    }
+    return 0;
+}
+
 void init_battle(unsigned char template_num) {
     menu_index = 0;
-    player_active_veggie = player_party[0];
-    currentPartyIndex = 0;
+    currentPartyIndex = get_first_party_veggie();
+    player_active_veggie = player_party[currentPartyIndex];
     encountered_veggie = veggie_templates[template_num];
     battle_state = BATTLE_STATE_MESSAGE;
     next_battle_state = BATTLE_STATE_DECIDE;
@@ -326,7 +336,7 @@ unsigned char update_battle(int inputs, int last_inputs) {
             } else {
                 battle_state = BATTLE_STATE_DECIDE;
                 if(battle_state == BATTLE_STATE_DECIDE) {
-                    setMenuRect(MENU_TYPE_ACTION);
+                    setMenuRect(MENU_TYPE_PARTY);
                 }
             }
         }
