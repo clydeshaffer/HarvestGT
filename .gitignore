@@ -1,0 +1,10 @@
+*.obj
+*.map
+*.bin
+*.TMP
+*.si
+*.gtg
+*.deflate
+bin
+build
+scripts/node_modules
