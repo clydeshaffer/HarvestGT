@@ -934,7 +934,7 @@ _DesertMap (assets.o):
 _DynaWave (assets.o):
     dynawave.o                build/dynawave.si:20
 _EnemyFrames_VEGGIES (assets.o):
-    battle.o                  build/battle.si:41
+    battle.o                  build/screens/battle.si:41
     enemies.o                 build/enemies.si:72
 _EnemySprites_VEGGIES (assets.o):
     enemies.o                 build/enemies.si:71
@@ -942,7 +942,7 @@ _FillRect (drawing_funcs.o):
     main.o                    build/main.si:39
 _FlushQueue (drawing_funcs.o):
 _FontFrames (assets.o):
-    menu.o                    build/menu.si:19
+    menu.o                    build/ui/menu.si:19
     drawing_funcs.o           build/drawing_funcs.si:38
 _FontSprites (assets.o):
     main.o                    build/main.si:50
@@ -965,15 +965,15 @@ _NextQueue (interrupt.o):
     drawing_funcs.o           build/drawing_funcs.si:20
 _PackedSprite (drawing_funcs.o):
 _QueueFillRect (drawing_funcs.o):
-    menu.o                    build/menu.si:14
+    menu.o                    build/ui/menu.si:14
 _QueuePackedSprite (drawing_funcs.o):
     main.o                    build/main.si:36
-    menu.o                    build/menu.si:13
-    battle.o                  build/battle.si:18
+    menu.o                    build/ui/menu.si:13
+    battle.o                  build/screens/battle.si:18
     enemies.o                 build/enemies.si:28
 _QueueSpriteRect (drawing_funcs.o):
     main.o                    build/main.si:37
-    battle.o                  build/battle.si:19
+    battle.o                  build/screens/battle.si:19
 _RoadMap (assets.o):
     level.o                   build/level.si:34
 _ST_enemy_index (enemy_util.o):
@@ -1045,8 +1045,8 @@ _audio_amplitudes (music.o):
 _audio_params_index (dynawave.o):
 _bankflip (gametank.o):
     main.o                    build/main.si:33
-    menu.o                    build/menu.si:20
-    battle.o                  build/battle.si:13
+    menu.o                    build/ui/menu.si:20
+    battle.o                  build/screens/battle.si:13
     enemies.o                 build/enemies.si:26
     tilemap.o                 build/tilemap.si:25
     drawing_funcs.o           build/drawing_funcs.si:41
@@ -1086,13 +1086,13 @@ _close_wall_traps (enemies.o):
 _currentPartyIndex (battle.o):
 _cursorX (drawing_funcs.o):
     main.o                    build/main.si:42
-    menu.o                    build/menu.si:16
-    battle.o                  build/battle.si:22
+    menu.o                    build/ui/menu.si:16
+    battle.o                  build/screens/battle.si:22
     vegetables.o              build/vegetables.si:31
 _cursorY (drawing_funcs.o):
     main.o                    build/main.si:43
-    menu.o                    build/menu.si:17
-    battle.o                  build/battle.si:23
+    menu.o                    build/ui/menu.si:17
+    battle.o                  build/screens/battle.si:23
     vegetables.o              build/vegetables.si:32
 _delay_counter (music.o):
 _do_fill_map (globals.o):
@@ -1101,7 +1101,7 @@ _do_fill_map (globals.o):
     enemies.o                 build/enemies.si:46
 _do_noise_effect (music.o):
     main.o                    build/main.si:66
-    battle.o                  build/battle.si:40
+    battle.o                  build/screens/battle.si:40
     enemies.o                 build/enemies.si:54
 _draw_battle_screen (battle.o):
     main.o                    build/main.si:82
@@ -1116,7 +1116,7 @@ _draw_player (main.o):
 _draw_world (tilemap.o):
     main.o                    build/main.si:61
 _encountered_veggie (vegetables.o):
-    battle.o                  build/battle.si:27
+    battle.o                  build/screens/battle.si:27
 _enemies (enemies.o):
     main.o                    build/main.si:68
     enemy_util.o              src/enemy_util.s:2
@@ -1209,8 +1209,8 @@ _maxHpMessage (enemies.o):
 _maybe_add_pillars (tilemap.o):
 _memcpy (memcpy.o):
     main.o                    build/main.si:2129
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
     drawing_funcs.o           build/drawing_funcs.si:1320
     drawing_funcs.o           build/drawing_funcs.si:1320
@@ -1219,9 +1219,9 @@ _memcpy (memcpy.o):
 _menuMode (battle.o):
 _menu_index (menu.o):
 _menu_text_count (menu.o):
-    battle.o                  build/battle.si:33
+    battle.o                  build/screens/battle.si:33
 _menu_texts (menu.o):
-    battle.o                  build/battle.si:32
+    battle.o                  build/screens/battle.si:32
 _messageBuf (menu.o):
 _message_string (globals.o):
     main.o                    build/main.si:28
@@ -1256,7 +1256,7 @@ _playerVeggieX (battle.o):
 _player_action_type (globals.o):
     main.o                    build/main.si:24
 _player_active_veggie (vegetables.o):
-    battle.o                  build/battle.si:26
+    battle.o                  build/screens/battle.si:26
 _player_anim_dir (globals.o):
     main.o                    build/main.si:20
     enemies.o                 build/enemies.si:41
@@ -1290,7 +1290,7 @@ _player_max_health (globals.o):
     enemies.o                 build/enemies.si:45
 _player_party (vegetables.o):
     main.o                    build/main.si:85
-    battle.o                  build/battle.si:28
+    battle.o                  build/screens/battle.si:28
 _player_state_offsets (globals.o):
 _player_x (globals.o):
     main.o                    build/main.si:14
@@ -1302,11 +1302,11 @@ _player_y (globals.o):
     enemies.o                 build/enemies.si:36
 _print (drawing_funcs.o):
     main.o                    build/main.si:41
-    menu.o                    build/menu.si:15
-    battle.o                  build/battle.si:21
+    menu.o                    build/ui/menu.si:15
+    battle.o                  build/screens/battle.si:21
     vegetables.o              build/vegetables.si:30
 _printBCDnum (drawing_funcs.o):
-    battle.o                  build/battle.si:20
+    battle.o                  build/screens/battle.si:20
     vegetables.o              build/vegetables.si:29
 _print_seed_inventory (vegetables.o):
     main.o                    build/main.si:91
@@ -1324,8 +1324,8 @@ _queue_end (drawing_funcs.o):
     interrupt.o               src/interrupt.s:11
 _queue_flags_param (draw_util.o):
     main.o                    build/main.si:48
-    menu.o                    build/menu.si:18
-    battle.o                  build/battle.si:24
+    menu.o                    build/ui/menu.si:18
+    battle.o                  build/screens/battle.si:24
     enemies.o                 build/enemies.si:29
     tilemap.o                 build/tilemap.si:28
     drawing_funcs.o           build/drawing_funcs.si:36
@@ -1341,13 +1341,13 @@ _random_loaded_enemy_slot (enemies.o):
 _random_reduce_rect (tilemap.o):
 _rect (draw_util.o):
     main.o                    build/main.si:49
-    battle.o                  build/battle.si:25
+    battle.o                  build/screens/battle.si:25
     tilemap.o                 build/tilemap.si:29
     drawing_funcs.o           build/drawing_funcs.si:37
 _render_menu (menu.o):
-    battle.o                  build/battle.si:38
+    battle.o                  build/screens/battle.si:38
 _render_menu_text (menu.o):
-    battle.o                  build/battle.si:39
+    battle.o                  build/screens/battle.si:39
 _repeat_point (music.o):
 _repeat_resume_pending (music.o):
 _resetSeeds (vegetables.o):
@@ -1372,7 +1372,7 @@ _scratchpad (tilemap.o):
 _seedArrowPosition (vegetables.o):
 _seed_inventory (vegetables.o):
     main.o                    build/main.si:88
-    battle.o                  build/battle.si:31
+    battle.o                  build/screens/battle.si:31
 _seedsThrownType (vegetables.o):
 _seedsThrownX (vegetables.o):
 _seedsThrownY (vegetables.o):
@@ -1380,11 +1380,11 @@ _selected_seed_type (vegetables.o):
     main.o                    build/main.si:87
 _set_battle_menu_mode (battle.o):
 _set_menu_box (menu.o):
-    battle.o                  build/battle.si:34
+    battle.o                  build/screens/battle.si:34
 _set_menu_index (menu.o):
-    battle.o                  build/battle.si:36
+    battle.o                  build/screens/battle.si:36
 _set_menu_msg (menu.o):
-    battle.o                  build/battle.si:35
+    battle.o                  build/screens/battle.si:35
 _set_note (dynawave.o):
     music.o                   build/music.si:22
 _set_tile (tilemap.o):
@@ -1443,12 +1443,12 @@ _update_battle (battle.o):
 _update_enemies (enemies.o):
     main.o                    build/main.si:74
 _update_menu (menu.o):
-    battle.o                  build/battle.si:37
+    battle.o                  build/screens/battle.si:37
 _veggie_names (vegetables.o):
-    battle.o                  build/battle.si:30
+    battle.o                  build/screens/battle.si:30
 _veggie_templates (vegetables.o):
     main.o                    build/main.si:86
-    battle.o                  build/battle.si:29
+    battle.o                  build/screens/battle.si:29
 _wait (wait.o):
     main.o                    build/main.si:100
     drawing_funcs.o           build/drawing_funcs.si:43
@@ -1511,25 +1511,25 @@ boolult (makebool.o):
 complax (compl.o):
     main.o                    build/main.si:2129
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
 condes (condes.o):
 copydata (copydata.o):
     crt0.o                    src/crt0.s:13
 decsp2 (decsp2.o):
     main.o                    build/main.si:2129
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
 decsp3 (decsp3.o):
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     enemies.o                 build/enemies.si:2777
     tilemap.o                 build/tilemap.si:2354
 decsp4 (decsp4.o):
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
+    menu.o                    build/ui/menu.si:380
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
@@ -1538,16 +1538,16 @@ decsp5 (decsp5.o):
     drawing_funcs.o           build/drawing_funcs.si:1320
 decsp7 (decsp7.o):
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
     enemies.o                 build/enemies.si:2777
 donelib (condes.o):
     crt0.o                    src/crt0.s:13
 incsp1 (incsp1.o):
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
     banking.o                 build/banking.si:104
     level.o                   build/level.si:211
@@ -1582,15 +1582,15 @@ incsp2 (incsp2.o):
     dynawave.o                build/dynawave.si:401
     dynawave.o                build/dynawave.si:401
 incsp3 (incsp3.o):
-    menu.o                    build/menu.si:380
+    menu.o                    build/ui/menu.si:380
     vegetables.o              build/vegetables.si:635
     enemies.o                 build/enemies.si:2777
     music.o                   build/music.si:519
     drawing_funcs.o           build/drawing_funcs.si:1320
 incsp4 (incsp4.o):
-    menu.o                    build/menu.si:380
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
     random.o                  build/random.si:193
     tilemap.o                 build/tilemap.si:2354
     tilemap.o                 build/tilemap.si:2354
@@ -1651,8 +1651,8 @@ ptr1 (zeropage.o):
     ldeaxi.o                  runtime/ldeaxi.s:8
     inflatemem.o              zlib/inflatemem.s:15
     main.o                    build/main.si:11
-    menu.o                    build/menu.si:11
-    battle.o                  build/battle.si:11
+    menu.o                    build/ui/menu.si:11
+    battle.o                  build/screens/battle.si:11
     vegetables.o              build/vegetables.si:11
     enemies.o                 build/enemies.si:11
     music.o                   build/music.si:11
@@ -1679,11 +1679,11 @@ push0 (pushax.o):
 pusha (pusha.o):
     main.o                    build/main.si:2129
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
-    menu.o                    build/menu.si:380
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    menu.o                    build/ui/menu.si:380
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
     vegetables.o              build/vegetables.si:635
     vegetables.o              build/vegetables.si:635
@@ -1724,11 +1724,11 @@ pusha (pusha.o):
     dynawave.o                build/dynawave.si:401
 pusha0 (pushax.o):
     main.o                    build/main.si:2129
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
     enemies.o                 build/enemies.si:2777
     enemies.o                 build/enemies.si:2777
@@ -1743,10 +1743,10 @@ pushax (pushax.o):
     main.o                    build/main.si:2129
     main.o                    build/main.si:2129
     main.o                    build/main.si:2129
-    menu.o                    build/menu.si:380
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    menu.o                    build/ui/menu.si:380
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
     level.o                   build/level.si:211
     enemies.o                 build/enemies.si:2777
@@ -1782,7 +1782,7 @@ pushaysp (pusha.o):
 pushw0sp (pushwsp.o):
     tilemap.o                 build/tilemap.si:2354
 pushwysp (pushwsp.o):
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     random.o                  build/random.si:193
     tilemap.o                 build/tilemap.si:2354
 regbank (zeropage.o):
@@ -1819,8 +1819,8 @@ sp (zeropage.o):
     crt0.o                    /home/clyde/repos/cc65/asminc/zeropage.inc:11
     add.o                     runtime/add.s:12
     main.o                    build/main.si:10
-    menu.o                    build/menu.si:10
-    battle.o                  build/battle.si:10
+    menu.o                    build/ui/menu.si:10
+    battle.o                  build/screens/battle.si:10
     vegetables.o              build/vegetables.si:10
     banking.o                 build/banking.si:10
     level.o                   build/level.si:10
@@ -1836,7 +1836,7 @@ sreg (zeropage.o):
     ldeaxi.o                  runtime/ldeaxi.s:8
     inflatemem.o              zlib/inflatemem.s:15
     icmp.o                    runtime/icmp.s:9
-    menu.o                    build/menu.si:10
+    menu.o                    build/ui/menu.si:10
     enemies.o                 build/enemies.si:10
     tilemap.o                 build/tilemap.si:10
 staspidx (staspidx.o):
@@ -1845,7 +1845,7 @@ staspidx (staspidx.o):
 stax0sp (staxsp.o):
     random.o                  build/random.si:193
 staxspidx (staxspi.o):
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     enemies.o                 build/enemies.si:2777
 staxysp (staxsp.o):
 tmp1 (zeropage.o):
@@ -1862,8 +1862,8 @@ tmp1 (zeropage.o):
     aslax4.o                  runtime/aslax4.s:8
     add.o                     runtime/add.s:12
     main.o                    build/main.si:11
-    menu.o                    build/menu.si:11
-    battle.o                  build/battle.si:11
+    menu.o                    build/ui/menu.si:11
+    battle.o                  build/screens/battle.si:11
     enemies.o                 build/enemies.si:11
     random.o                  build/random.si:11
     tilemap.o                 build/tilemap.si:11
@@ -1889,17 +1889,17 @@ tosmoda0 (mod.o):
 tosmodax (mod.o):
     random.o                  build/random.si:193
 tosmula0 (mul8.o):
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     vegetables.o              build/vegetables.si:635
 tosora0 (or.o):
 tosorax (or.o):
     main.o                    build/main.si:2129
 tossuba0 (sub.o):
-    battle.o                  build/battle.si:1033
+    battle.o                  build/screens/battle.si:1033
     tilemap.o                 build/tilemap.si:2354
 tossubax (sub.o):
     random.o                  build/random.si:193

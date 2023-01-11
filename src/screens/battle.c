@@ -4,7 +4,7 @@
 #include "drawing_funcs.h"
 #include "vegetables.h"
 #include "fontmap.h"
-#include "menu.h"
+#include "ui/menu.h"
 #include "music.h"
 
 extern unsigned char EnemyFrames_VEGGIES;

@@ -11,7 +11,7 @@
 #include "banking.h"
 #include "savegame.h"
 #include "fontmap.h"
-#include "battle.h"
+#include "screens/battle.h"
 #include "vegetables.h"
 
 int inputs = 0, last_inputs = 0;

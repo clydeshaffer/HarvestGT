@@ -6,7 +6,7 @@
 #include "music.h"
 #include "random.h"
 #include "banking.h"
-#include "battle.h"
+#include "screens/battle.h"
 #include "vegetables.h"
 
 void LD_enemy_index(char i);
