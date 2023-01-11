@@ -250,6 +250,7 @@ MobState* next_enemy_slot() {
 }
 
 #pragma codeseg (push, "CODE2");
+#pragma rodata-name (push, "RODATA2");
 void draw_enemies() {
     unsigned char i = 0;
     MobState *enemy = enemies;
@@ -724,4 +725,5 @@ void player_face_enemy() {
         }
     }
 }
+#pragma rodata-name (pop);
 #pragma codeseg (pop);

@@ -14,7 +14,9 @@ AFLAGS = --cpu 65C02 --bin-include-dir lib --bin-include-dir $(ODIR)/assets
 LFLAGS = -C gametank-2M.cfg -m $(ODIR)/out.map -vm
 LLIBS = lib/gametank.lib
 
-_COBJS = globals.o gametank.o dynawave.o drawing_funcs.o tilemap.o random.o music.o enemies.o level.o banking.o savegame.o vegetables.o battle.o main.o
+_COBJS = globals.o gametank.o dynawave.o drawing_funcs.o \
+tilemap.o random.o music.o enemies.o level.o banking.o \
+savegame.o vegetables.o battle.o menu.o main.o
 COBJS = $(patsubst %,$(ODIR)/%,$(_COBJS))
 _AOBJS = assets.o wait.o vectors.o interrupt.o draw_util.o enemy_util.o shifts.o mapload.o
 AOBJS = $(patsubst %,$(ODIR)/%,$(_AOBJS))

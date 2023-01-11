@@ -4,13 +4,12 @@
 #include "drawing_funcs.h"
 #include "vegetables.h"
 #include "fontmap.h"
+#include "menu.h"
 #include "music.h"
 
 extern unsigned char EnemyFrames_VEGGIES;
-unsigned char menu_index;
 
-
-char menuMode, textboxX, textboxY, textboxW, textboxH;
+char menuMode;
 
 #define MENU_TYPE_NONE 0
 #define MENU_TYPE_MESSAGE 1
@@ -18,13 +17,9 @@ char menuMode, textboxX, textboxY, textboxW, textboxH;
 #define MENU_TYPE_PARTY 3
 #define MENU_TYPE_SKILL 4
 
-#define TEXT_BG_COLOR 212
-
-char messageBuf[25];
 char stateChangeTimer = 0;
 char playerVeggieX = 0;
 char wildVeggieX = 0;
-char menuEntries = 0;
 char currentPartyIndex = 0;
 
 #define BATTLE_STATE_MESSAGE 0
@@ -37,6 +32,7 @@ char battle_state;
 char next_battle_state;
 
 #pragma codeseg (push, "CODE2");
+#pragma rodata-name (push, "RODATA2");
 
 char checkLoseCondition() {
     char i;
@@ -47,82 +43,43 @@ char checkLoseCondition() {
     return 1;
 }
 
-void setMenuRect(char menuType) {
+void set_battle_menu_mode(char menuType) {
+    char i;
     if(menuMode != menuType) {
-        menu_index = 0;
+        set_menu_index(1);
         if(menuMode == MENU_TYPE_PARTY)
-            menu_index = 2;
+            set_menu_index(3);
         else if(menuMode == MENU_TYPE_SKILL)
-            menu_index = 1;
+            set_menu_index(2);
     }
     menuMode = menuType;
     switch (menuType)
     {
     case MENU_TYPE_ACTION:
-        textboxX = 16;
-        textboxY = 8;
-        textboxW = 48;
-        textboxH = 36;
-        menuEntries = 4;
+        set_menu_box(16, 8, 48, 36);
+        menu_texts[0] = "Attack";
+        menu_texts[1] = "Skill";
+        menu_texts[2] = "Party";
+        menu_texts[3] = "Flee";
+        menu_text_count = 4;
         break;
     case MENU_TYPE_PARTY:
-        textboxX = 16;
-        textboxY = 8;
-        textboxW = 48;
-        textboxH = 45;
-        menuEntries = 5;
-        break;
-    case MENU_TYPE_SKILL:
-        textboxX = 16;
-        textboxY = 8;
-        textboxW = 48;
-        textboxH = 18;
-        menuEntries = 2;
-        break;
-    case MENU_TYPE_MESSAGE:
-        textboxX = 16;
-        textboxY = 8;
-        textboxW = 108;
-        textboxH = 9;
-        menuEntries = 1;
-        break;
-    default:
-        break;
-    }
-}
-
-void renderMenuText() {
-    char i;
-    switch (menuMode)
-    {
-    case MENU_TYPE_ACTION:
-        cursorX = 21; cursorY = 13;
-        print("Attack");
-        cursorX = 21; cursorY = 21;
-        print("Skill");
-        cursorX = 21; cursorY = 29;
-        print("Party");
-        cursorX = 21; cursorY = 37;
-        print("Flee");
-        break;
-    case MENU_TYPE_PARTY:
-        cursorY = 13;
+        set_menu_box(16, 8, 48, 45);
         for(i = 0; i < 5; ++i) {
-            cursorX = 21;
-            print(veggie_names[player_party[i].type]);
-            cursorY += 8;
+            menu_texts[i] = veggie_names[player_party[i].type];
         }
+        menu_text_count = 5;
         break;
     case MENU_TYPE_SKILL:
-        cursorX = 21; cursorY = 13;
-        print("???");
-        cursorX = 21; cursorY = 21;
-        print("???");
+        set_menu_box(16, 8, 48, 18);
+        menu_texts[0] = "???";
+        menu_texts[1] = "???";
+        menu_text_count = 2;
         break;
     case MENU_TYPE_MESSAGE:
-        cursorX = 21; cursorY = 13;
-        messageBuf[24] = 0;
-        print(messageBuf);
+        set_menu_box(16, 8, 108, 9);
+        set_menu_index(0);
+        break;
     default:
         break;
     }
@@ -140,10 +97,7 @@ void draw_battle_screen() {
     QueuePackedSprite(&EnemyFrames_VEGGIES, 96 + wildVeggieX, 80, encountered_veggie.type - 1, SPRITE_FLIP_X, bankflip | 2, 0);
 
     if(menuMode != MENU_TYPE_NONE) {
-        if(menuMode != MENU_TYPE_MESSAGE) {
-            QueuePackedSprite(&FontFrames, 12, 13 + (menu_index << 3), '>' - 1, 0, bankflip, 128);
-        }
-        QueueFillRect(textboxX, textboxY, textboxW, textboxH, TEXT_BG_COLOR);
+        render_menu();
     }
 }
 
@@ -169,17 +123,11 @@ void draw_battle_screen_postqueue() {
     cursorX -= 12;
     printBCDnum(encountered_veggie.hp);
 
-    renderMenuText();
+    if(menuMode != MENU_TYPE_NONE)
+        render_menu_text();
 }
 
-void set_msg(char* newMsg, char i) {
-    while(*newMsg != 0) {
-        messageBuf[i] = *newMsg;
-        ++i;
-        ++newMsg;
-    }
-    messageBuf[i] = 0;
-}
+
 
 char get_first_party_veggie() {
     char i;
@@ -192,36 +140,29 @@ char get_first_party_veggie() {
 }
 
 void init_battle(unsigned char template_num) {
-    menu_index = 0;
+    set_menu_index(1);
     currentPartyIndex = get_first_party_veggie();
     player_active_veggie = player_party[currentPartyIndex];
     encountered_veggie = veggie_templates[template_num];
     battle_state = BATTLE_STATE_MESSAGE;
     next_battle_state = BATTLE_STATE_DECIDE;
     stateChangeTimer = 180;
-    setMenuRect(MENU_TYPE_MESSAGE);
-    set_msg("Found ", 0);
-    set_msg(veggie_names[encountered_veggie.type], 6);
+    set_battle_menu_mode(MENU_TYPE_MESSAGE);
+    set_menu_msg("Found ", 0);
+    set_menu_msg(veggie_names[encountered_veggie.type], 6);
 }
 
 unsigned char update_battle(int inputs, int last_inputs) {
     unsigned char outsignal = BATTLE_SIGNAL_NONE;
+    unsigned char menu_selection;
     if(battle_state == BATTLE_STATE_DECIDE) {
             playerVeggieX = 0;
             wildVeggieX = 0;
-            if(INPUT_MASK_DOWN & inputs & ~last_inputs) {
-                ++menu_index;
-            }
-            if(INPUT_MASK_UP & inputs & ~last_inputs) {
-                --menu_index;
-            }
-            if(menu_index == 255) menu_index = 0;
-            if(menu_index >= menuEntries) menu_index = menuEntries-1;
-        
-
-            if(INPUT_MASK_A & inputs & ~last_inputs) {
+            menu_selection = update_menu(inputs, last_inputs);
+            if(menu_selection) {
+                --menu_selection;
                 if(menuMode == MENU_TYPE_ACTION) {
-                    switch (menu_index)
+                    switch (menu_selection)
                     {
                     case 0: //attack
                         asm("SED");
@@ -229,46 +170,46 @@ unsigned char update_battle(int inputs, int last_inputs) {
                         asm("CLD");
                         do_noise_effect(30, 64, 8);
                         battle_state = BATTLE_STATE_PLAYER_MOVE;
-                        setMenuRect(MENU_TYPE_NONE);
+                        set_battle_menu_mode(MENU_TYPE_NONE);
                         stateChangeTimer = 30;
                         break;
                     case 1: //skill
-                        setMenuRect(MENU_TYPE_SKILL);
+                        set_battle_menu_mode(MENU_TYPE_SKILL);
                         break;
                     case 2: //party
-                        setMenuRect(MENU_TYPE_PARTY);
+                        set_battle_menu_mode(MENU_TYPE_PARTY);
                         break;
                     case 3: //flee
                         player_party[currentPartyIndex] = player_active_veggie;
                         battle_state = BATTLE_STATE_MESSAGE;
                         next_battle_state = BATTLE_STATE_COMPLETE;
                         stateChangeTimer = 180;
-                        setMenuRect(MENU_TYPE_MESSAGE);
-                        set_msg("Ran away...", 0);
+                        set_battle_menu_mode(MENU_TYPE_MESSAGE);
+                        set_menu_msg("Ran away...", 0);
                         break;
                     default:
                         break;
                     }
                 } else if(menuMode == MENU_TYPE_PARTY) {
-                    if(player_party[menu_index].type != VEGGIE_TYPE_NONE) {
-                        if(menu_index == currentPartyIndex) {
+                    if(player_party[menu_selection].type != VEGGIE_TYPE_NONE) {
+                        if(menu_selection == currentPartyIndex) {
                             battle_state = BATTLE_STATE_MESSAGE;
                             next_battle_state = BATTLE_STATE_DECIDE;
                             stateChangeTimer = 180;
-                            setMenuRect(MENU_TYPE_MESSAGE);
-                            set_msg("Already out!", 0);
+                            set_battle_menu_mode(MENU_TYPE_MESSAGE);
+                            set_menu_msg("Already out!", 0);
                         } else {
                             if(player_active_veggie.hp != 0) {
                                 player_party[currentPartyIndex] = player_active_veggie;
                             }
-                            currentPartyIndex = menu_index;
+                            currentPartyIndex = menu_selection;
                             player_active_veggie = player_party[currentPartyIndex];
                             battle_state = BATTLE_STATE_MESSAGE;
                             next_battle_state = BATTLE_STATE_DECIDE;
                             stateChangeTimer = 180;
-                            setMenuRect(MENU_TYPE_MESSAGE);
-                            set_msg("Sent out ", 0);
-                            set_msg(veggie_names[player_active_veggie.type], 9);
+                            set_battle_menu_mode(MENU_TYPE_MESSAGE);
+                            set_menu_msg("Sent out ", 0);
+                            set_menu_msg(veggie_names[player_active_veggie.type], 9);
                         }
                     }
                 }
@@ -277,11 +218,11 @@ unsigned char update_battle(int inputs, int last_inputs) {
             if(INPUT_MASK_B & inputs & ~last_inputs) {
                 if(menuMode == MENU_TYPE_PARTY) {
                     if(player_active_veggie.hp != 0) {
-                        setMenuRect(MENU_TYPE_ACTION);
+                        set_battle_menu_mode(MENU_TYPE_ACTION);
                     }
                 } else {
                     if(menuMode != MENU_TYPE_ACTION) {
-                        setMenuRect(MENU_TYPE_ACTION);
+                        set_battle_menu_mode(MENU_TYPE_ACTION);
                     }
                 }
             }
@@ -290,7 +231,7 @@ unsigned char update_battle(int inputs, int last_inputs) {
         if(stateChangeTimer == 0 || (INPUT_MASK_A & inputs & ~last_inputs)) {
             battle_state = next_battle_state;
             if(battle_state == BATTLE_STATE_DECIDE) {
-                setMenuRect(MENU_TYPE_ACTION);
+                set_battle_menu_mode(MENU_TYPE_ACTION);
             }
         }
     } else if(battle_state == BATTLE_STATE_PLAYER_MOVE) {
@@ -303,8 +244,8 @@ unsigned char update_battle(int inputs, int last_inputs) {
                 battle_state = BATTLE_STATE_MESSAGE;
                 next_battle_state = BATTLE_STATE_COMPLETE;
                 stateChangeTimer = 180;
-                setMenuRect(MENU_TYPE_MESSAGE);
-                set_msg("You win! Picked up seeds", 0);
+                set_battle_menu_mode(MENU_TYPE_MESSAGE);
+                set_menu_msg("You win! Picked up seeds", 0);
                 //asm("SED");
                 seed_inventory[encountered_veggie.type] = seed_inventory[encountered_veggie.type]+1;
                 //asm("CLD");
@@ -315,7 +256,7 @@ unsigned char update_battle(int inputs, int last_inputs) {
                 stateChangeTimer = 30;
                 battle_state = BATTLE_STATE_ENEMY_MOVE;
                 if(battle_state == BATTLE_STATE_DECIDE) {
-                    setMenuRect(MENU_TYPE_ACTION);
+                    set_battle_menu_mode(MENU_TYPE_ACTION);
                 }
                 do_noise_effect(30, 64, 8);
             }
@@ -333,15 +274,15 @@ unsigned char update_battle(int inputs, int last_inputs) {
                 battle_state = BATTLE_STATE_MESSAGE;
                 next_battle_state = BATTLE_STATE_COMPLETE;
                 stateChangeTimer = 180;
-                setMenuRect(MENU_TYPE_MESSAGE);
-                set_msg("Wiped out...", 0);
+                set_battle_menu_mode(MENU_TYPE_MESSAGE);
+                set_menu_msg("Wiped out...", 0);
             } else {
                 battle_state = BATTLE_STATE_DECIDE;
                 if(battle_state == BATTLE_STATE_DECIDE) {
                     if(player_active_veggie.hp == 0) {
-                    setMenuRect(MENU_TYPE_PARTY);
+                    set_battle_menu_mode(MENU_TYPE_PARTY);
                     } else {
-                        setMenuRect(MENU_TYPE_ACTION);
+                        set_battle_menu_mode(MENU_TYPE_ACTION);
                     }
                 }
             }
@@ -357,4 +298,5 @@ unsigned char update_battle(int inputs, int last_inputs) {
     }
     return outsignal;
 }
+#pragma rodata-name (pop);
 #pragma codeseg (pop);
