@@ -1,6 +1,8 @@
 #ifndef VEGETABLES_H
 #define VEGETABLES_H
 
+#define PLAYER_PARTY_SIZE 5
+
 typedef struct Veggie {
     unsigned char type, hp, maxhp, atk, def;
     unsigned char move0, move1, move2, move3;
@@ -54,5 +56,7 @@ char findSeed(char x, char y);
 #define VEGGIE_TYPE_ONION 9
 #define VEGGIE_TYPE_BROCCOLI 10
 #define VEGGIE_TYPE_GRAPES 11
+
+#define VEGGIE_TYPE_COUNT 12
 
 #endif

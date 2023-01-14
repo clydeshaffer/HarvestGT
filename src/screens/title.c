@@ -1,4 +1,6 @@
 #include "ui/menu.h"
+#include "music.h"
+#include "savegame.h"
 #include "drawing_funcs.h"
 #include "title.h"
 #include "fontmap.h"
@@ -24,5 +26,17 @@ void draw_title_screen_postqueue() {
 }
 
 unsigned char update_title(int inputs, int last_inputs) {
-    return update_menu(inputs, last_inputs);
+    switch(update_menu(inputs, last_inputs)) {
+        case 1:
+            if(test_save_magic_number()) {
+                load_game_vars();
+                return TITLE_SIGNAL_LOAD;
+            }
+            do_noise_effect(100, -100, 5);
+            return TITLE_SIGNAL_NONE;
+        case 2:
+            return TITLE_SIGNAL_NEW;
+        default:
+            return TITLE_SIGNAL_NONE;
+    }
 }

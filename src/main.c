@@ -315,7 +315,6 @@ void main() {
             rnd();
             draw_world();
             draw_title_screen();
-            i = update_title(inputs, last_inputs);
             ++player_anim_frame;
             if(player_anim_frame & 1) {
                 camera_x.i += player_dir_x;
@@ -328,10 +327,8 @@ void main() {
             if((camera_y.i + 32 > CAMERA_LIMIT) || (camera_y.i == 0)) {
                 player_dir_y = -player_dir_y;
             }
-            if(i == TITLE_SIGNAL_NEW) {
+            if(update_title(inputs, last_inputs)) {
                 init_game_state(GAME_STATE_PLAY);
-            } else if(i == TITLE_SIGNAL_LOAD) {
-                do_noise_effect(100, -100, 5);
             }
         }
         else if(game_state == GAME_STATE_PLAY) {    

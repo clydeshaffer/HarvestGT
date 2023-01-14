@@ -3,6 +3,7 @@
 #include "globals.h"
 #include "level.h"
 #include "banking.h"
+#include "vegetables.h"
 
 #pragma bss-name (push, "SAVEGAME")
 unsigned int saved_magic_number;
@@ -11,27 +12,54 @@ int saved_rnd_seed;
 unsigned char saved_player_max_health;
 unsigned char saved_player_health;
 
+unsigned char saved_seed_inventory[VEGGIE_TYPE_COUNT];
+Veggie saved_player_party[PLAYER_PARTY_SIZE];
+unsigned char saved_map_x, saved_map_y;
+coordinate saved_player_x, saved_player_y;
+
 #pragma bss-name (pop)
 
 extern unsigned char romBankMirror;
 
+#pragma code-name (push, "CODE2")
+
 void save_game_vars() {
+    unsigned char i;
     unsigned char tmp = romBankMirror;
     ChangeRomBank(BANK_SAVEGAME);
     saved_magic_number = SAVEGAME_MAGIC_INT;
     saved_rnd_seed = rnd_seed;
-    //saved_level_number = level_number;
+
+    for(i = 0; i < PLAYER_PARTY_SIZE; ++i) {
+        saved_player_party[i] = player_party[i];
+    }
+
+    for(i = 0; i < VEGGIE_TYPE_COUNT; ++i) {
+        saved_seed_inventory[i] = seed_inventory[i];
+    }
+
+    saved_map_x = world_map_x;
+    saved_map_y = world_map_y;
+    saved_player_x = player_x;
+    saved_player_y = player_y;
+
     saved_player_health = player_health;
     saved_player_max_health = player_max_health;
     ChangeRomBank(tmp);
 }
 
 void load_game_vars() {
+    unsigned char i;
     unsigned char tmp = romBankMirror;
     ChangeRomBank(BANK_SAVEGAME);
     rnd_seed = saved_rnd_seed;
-    //level_number = saved_level_number;
-    //player_health = saved_player_health;
+    for(i = 0; i < PLAYER_PARTY_SIZE; ++i) {
+        player_party[i] = saved_player_party[i];
+    }
+
+    for(i = 0; i < VEGGIE_TYPE_COUNT; ++i) {
+        seed_inventory[i] = saved_seed_inventory[i];
+    }
     player_max_health = saved_player_max_health;
     ChangeRomBank(tmp);
 }
@@ -51,3 +79,5 @@ void clear_save() {
     saved_magic_number = 0;
     ChangeRomBank(tmp);
 }
+
+#pragma code-size (pop)
