@@ -17,6 +17,9 @@ char menuMode;
 #define MENU_TYPE_PARTY 3
 #define MENU_TYPE_SKILL 4
 
+#pragma code-name (push, "CODE2");
+#pragma rodata-name (push, "RODATA2");
+
 char stateChangeTimer = 0;
 char playerVeggieX = 0;
 char wildVeggieX = 0;
@@ -30,9 +33,6 @@ char currentPartyIndex = 0;
 
 char battle_state;
 char next_battle_state;
-
-#pragma codeseg (push, "CODE2");
-#pragma rodata-name (push, "RODATA2");
 
 char checkLoseCondition() {
     char i;
@@ -64,11 +64,7 @@ void set_battle_menu_mode(char menuType) {
         menu_text_count = 4;
         break;
     case MENU_TYPE_PARTY:
-        set_menu_box(16, 8, 48, 45);
-        for(i = 0; i < 5; ++i) {
-            menu_texts[i] = veggie_names[player_party[i].type];
-        }
-        menu_text_count = 5;
+        init_party_menu(16, 8);
         break;
     case MENU_TYPE_SKILL:
         set_menu_box(16, 8, 48, 18);
@@ -300,4 +296,4 @@ unsigned char update_battle(int inputs, int last_inputs) {
     return outsignal;
 }
 #pragma rodata-name (pop);
-#pragma codeseg (pop);
+#pragma code-name (pop);

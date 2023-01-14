@@ -26,7 +26,7 @@ void load_enemies_for_level(char levnum) {
     load_enemy_type((ENEMY_TYPE_VEGGIES));
 }
 
-void init_level(unsigned char x, unsigned char y) {
+void init_level(unsigned char x, unsigned char y, unsigned char traveling) {
         do_fill_map = 0;
         switch_tileset(0);
         //clear_spritebank(16);
@@ -51,15 +51,16 @@ void init_level(unsigned char x, unsigned char y) {
         ChangeRomBank(BANK_COMMON);
 
 
-        if(world_map_x != x) {
-            player_x.b.msb = 31 - player_x.b.msb;
-            player_x.b.lsb = 128;
-        } else if(world_map_y != y) {
-            player_y.b.msb = 31 - player_y.b.msb;
-            player_y.b.lsb = 128;
-        } else {
-            find_start_tile(&player_x, &player_y);
-        }
+        
+            if(world_map_x != x) {
+                player_x.b.msb = 31 - player_x.b.msb;
+                player_x.b.lsb = 128;
+            } else if(world_map_y != y) {
+                player_y.b.msb = 31 - player_y.b.msb;
+                player_y.b.lsb = 128;
+            } else if(!traveling) {
+                find_start_tile(&player_x, &player_y);
+            }
         world_map_x = x;
         world_map_y = y;
         camera_x.i = player_x.i - 1024;

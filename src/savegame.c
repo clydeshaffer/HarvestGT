@@ -21,8 +21,6 @@ coordinate saved_player_x, saved_player_y;
 
 extern unsigned char romBankMirror;
 
-#pragma code-name (push, "CODE2")
-
 void save_game_vars() {
     unsigned char i;
     unsigned char tmp = romBankMirror;
@@ -60,6 +58,12 @@ void load_game_vars() {
     for(i = 0; i < VEGGIE_TYPE_COUNT; ++i) {
         seed_inventory[i] = saved_seed_inventory[i];
     }
+
+    world_map_x = saved_map_x;
+    world_map_y = saved_map_y;
+    player_x = saved_player_x;
+    player_y = saved_player_y;
+
     player_max_health = saved_player_max_health;
     ChangeRomBank(tmp);
 }
@@ -79,5 +83,3 @@ void clear_save() {
     saved_magic_number = 0;
     ChangeRomBank(tmp);
 }
-
-#pragma code-size (pop)

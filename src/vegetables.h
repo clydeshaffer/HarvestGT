@@ -33,6 +33,10 @@ void plantedSeed(char x, char y, char type);
 
 char randomInventorySeed();
 
+void init_party_menu(char x, char y);
+
+void init_seeds_menu(char x, char y);
+
 void add_to_party(char type);
 
 char findSeed(char x, char y);

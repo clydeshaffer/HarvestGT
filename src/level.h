@@ -6,6 +6,6 @@ extern unsigned char world_map_y;
 
 char music_for_level();
 
-void init_level(unsigned char x, unsigned char y);
+void init_level(unsigned char x, unsigned char y, unsigned char traveling);
 
 #endif

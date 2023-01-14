@@ -11,9 +11,10 @@
 #include "banking.h"
 #include "savegame.h"
 #include "fontmap.h"
-#include "screens/battle.h"
 #include "vegetables.h"
 #include "screens/title.h"
+#include "screens/battle.h"
+#include "screens/pause.h"
 
 int inputs = 0, last_inputs = 0;
 int inputs2 = 0, last_inputs2 = 0;
@@ -78,7 +79,6 @@ void init_game_state(unsigned char new_state) {
     game_state = new_state;
     stop_music();
     if(new_state == GAME_STATE_TITLE) {
-        init_title();
         player_max_health = INITIAL_MAX_HEALTH;
         player_dir_x = 8;
         player_dir_y = 8;
@@ -88,14 +88,9 @@ void init_game_state(unsigned char new_state) {
         player_health = 0;
         stairs_known = 0;
         updateInputs();
-        if(inputs & INPUT_MASK_C) {
-            clear_save();
-        }
-        if(test_save_magic_number()) {
-            load_game_vars();
-        }
-        init_level(128, 128);
+        init_level(128, 128, 0);
         ChangeRomBank(BANK_COMMON);
+        init_title();
         player_party[0] = veggie_templates[0];
         player_party[1].type = VEGGIE_TYPE_NONE;
         player_party[2].type = VEGGIE_TYPE_NONE;
@@ -146,7 +141,7 @@ void draw_player() {
 void draw_hud() {
 }
 
-void fill_local_map() {
+/*void fill_local_map() {
     static unsigned char i, j, k;
     static char *tmpptr_char, *tmpptr_char2;
     *vram_VX = 0;
@@ -187,9 +182,9 @@ void fill_local_map() {
         tmpptr_char2 += 27;
         tmpptr_char += 123;
     }
-}
+}*/
 
-void fill_whole_map() {
+/*void fill_whole_map() {
     unsigned char i, j, k;
     char *tmpptr_char, *tmpptr_char2;
     *vram_VX = 0;
@@ -229,7 +224,7 @@ void fill_whole_map() {
         cursorY++;
         tmpptr_char += 96;
     }
-}
+}*/
 
 void main() {
     unsigned char i, j, k;
@@ -378,6 +373,7 @@ void main() {
                 }
             } else if(player_anim_state == PLAYER_STATE_NEUTRAL) {
                 if(inputs & INPUT_MASK_START & ~last_inputs) {
+                    init_pause_screen();
                     game_state = GAME_STATE_PAUSED;
                 }
                 else if(inputs & INPUT_MASK_A & ~last_inputs) {
@@ -519,14 +515,13 @@ void main() {
             }
         } else if(game_state == GAME_STATE_PAUSED) {
             draw_world();
-            draw_enemies();
             draw_player();
-            draw_hud();
+            draw_pause_screen();
             /*SET_RECT(28, 16, 74,84, 156, 16, 0, bankflip)
             QueueSpriteRect();
             SET_RECT(48, 48, 32,32, 0, 128, 0, bankflip)
             QueueSpriteRect();*/
-            if(inputs & INPUT_MASK_START & ~last_inputs) {
+            if(update_pause_screen(inputs, last_inputs)) {
                 game_state = GAME_STATE_PLAY;
             }
             /*queue_flags_param = DMA_GCARRY;
@@ -615,19 +610,12 @@ void main() {
             }
             if(do_fill_map) {
                 do_fill_map = 0;
-                fill_whole_map();
+                //fill_whole_map();
             } else {
-                fill_local_map();
+                //fill_local_map();
             }
         } else if(game_state == GAME_STATE_PAUSED) {
-            flagsMirror = DMA_NMI | DMA_ENABLE | DMA_IRQ | frameflip;
-            *dma_flags = flagsMirror;
-            cursorX = 49;
-            cursorY = 16;
-            print("Paused");
-            cursorX = 10;
-            cursorY = 24;
-            print_seed_inventory();
+            draw_pause_screen_postqueue();
         } else if(game_state == GAME_STATE_ENDSCREEN) {
             cursorX = 8;
             cursorY = 60;
@@ -644,19 +632,19 @@ void main() {
 
         if(player_y.i < 64) {
             resetSeeds();
-            init_level(world_map_x, world_map_y-1);
+            init_level(world_map_x, world_map_y-1, 1);
             ChangeRomBank(BANK_COMMON);
         } else if(player_y.i > 8096) {
             resetSeeds();
-            init_level(world_map_x, world_map_y+1);
+            init_level(world_map_x, world_map_y+1, 1);
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i < 64) {
             resetSeeds();
-            init_level(world_map_x-1, world_map_y);
+            init_level(world_map_x-1, world_map_y, 1);
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i > 8096) {
             resetSeeds();
-            init_level(world_map_x+1, world_map_y);
+            init_level(world_map_x+1, world_map_y, 1);
             ChangeRomBank(BANK_COMMON);
         }
 

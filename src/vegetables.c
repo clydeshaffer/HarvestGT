@@ -2,10 +2,11 @@
 #include "drawing_funcs.h"
 #include "fontmap.h"
 #include "random.h"
+#include "ui/menu.h"
 
 Veggie player_active_veggie;
 Veggie encountered_veggie;
-Veggie player_party[5];
+Veggie player_party[PLAYER_PARTY_SIZE];
 
 /*
     unsigned char type, hp, maxhp, atk, def;
@@ -94,6 +95,27 @@ char randomInventorySeed() {
         }
     }
     return VEGGIE_TYPE_NONE;
+}
+
+void init_party_menu(char x, char y) {
+    char i;
+    set_menu_box(x, y, 48, 45);
+    for(i = 0; i < PLAYER_PARTY_SIZE; ++i) {
+        menu_texts[i] = veggie_names[player_party[i].type];
+    }
+    menu_text_count = PLAYER_PARTY_SIZE;
+}
+
+void init_seeds_menu(char x, char y) {
+    char i;
+    set_menu_box(x, y, 48, 110);
+    menu_text_count = 0;
+    for(i = 1; i < VEGGIE_TYPE_COUNT; ++i) {
+        if(seed_inventory[i]) {
+            menu_texts[menu_text_count] = veggie_names[i];
+            ++menu_text_count;
+        }
+    }
 }
 
 char last_seed_thrown;

@@ -4,6 +4,10 @@
 #include "drawing_funcs.h"
 #include "title.h"
 #include "fontmap.h"
+#include "level.h"
+
+#pragma code-name (push, "CODE2");
+#pragma rodata-name (push, "RODATA2");
 
 void draw_title_screen() {
     render_menu();
@@ -30,6 +34,7 @@ unsigned char update_title(int inputs, int last_inputs) {
         case 1:
             if(test_save_magic_number()) {
                 load_game_vars();
+                init_level(world_map_x, world_map_y, 0);
                 return TITLE_SIGNAL_LOAD;
             }
             do_noise_effect(100, -100, 5);
@@ -40,3 +45,6 @@ unsigned char update_title(int inputs, int last_inputs) {
             return TITLE_SIGNAL_NONE;
     }
 }
+
+#pragma code-name (pop);
+#pragma rodata-name (pop);
