@@ -4,6 +4,7 @@
 #include "level.h"
 #include "banking.h"
 #include "vegetables.h"
+#include "enemies.h"
 
 #pragma bss-name (push, "SAVEGAME")
 unsigned int saved_magic_number;
@@ -16,6 +17,11 @@ unsigned char saved_seed_inventory[VEGGIE_TYPE_COUNT];
 Veggie saved_player_party[PLAYER_PARTY_SIZE];
 unsigned char saved_map_x, saved_map_y;
 coordinate saved_player_x, saved_player_y;
+
+MobState saved_enemies[MAX_ENEMIES];
+unsigned char saved_enemy_count;
+unsigned char saved_enemy_type_slots[ENEMY_TYPE_NUM_SLOTS];
+unsigned char saved_enemy_type_used_slots = 0;
 
 #pragma bss-name (pop)
 
@@ -65,6 +71,36 @@ void load_game_vars() {
     player_y = saved_player_y;
 
     player_max_health = saved_player_max_health;
+    ChangeRomBank(tmp);
+}
+
+void save_mobs() {
+    char i;
+    unsigned char tmp = romBankMirror;
+    ChangeRomBank(BANK_SAVEGAME);
+    for(i = 0; i < MAX_ENEMIES; ++i) {
+        saved_enemies[i] = enemies[i];
+    }
+    saved_enemy_count = enemy_count;
+    for(i = 0; i < ENEMY_TYPE_NUM_SLOTS; ++i) {
+        saved_enemy_type_slots[i] = enemy_type_slots[i];
+    }
+    saved_enemy_type_used_slots = enemy_type_used_slots;
+    ChangeRomBank(tmp);
+}
+
+void load_mobs() {
+    char i;
+    unsigned char tmp = romBankMirror;
+    ChangeRomBank(BANK_SAVEGAME);
+    for(i = 0; i < MAX_ENEMIES; ++i) {
+        enemies[i] = saved_enemies[i];
+    }
+    enemy_count = saved_enemy_count;
+    for(i = 0; i < ENEMY_TYPE_NUM_SLOTS; ++i) {
+        enemy_type_slots[i] = saved_enemy_type_slots[i];
+    }
+    enemy_type_used_slots = saved_enemy_type_used_slots;
     ChangeRomBank(tmp);
 }
 

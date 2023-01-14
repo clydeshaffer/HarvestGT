@@ -32,6 +32,8 @@ void switch_tileset(unsigned char level_num) {
     load_spritesheet(&Tileset_00, 0);
 }
 
+#pragma codeseg (push, "CODE2");
+
 void trim_edge_rects(Rect *r) {
     if(r->x == 0) {
         r->x++;
@@ -156,7 +158,6 @@ void place_stairs(Rect *r) {
 }
 
 unsigned char scratchpad[256];
-#pragma codeseg (push, "CODE2");
 void generate_map() {
     unsigned int i, j, st;
     Rect *mapRects = (Rect*) scratchpad;

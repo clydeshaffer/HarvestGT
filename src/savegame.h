@@ -9,6 +9,10 @@ void save_game_vars();
 
 void load_game_vars();
 
+void save_mobs();
+
+void load_mobs();
+
 char test_save_magic_number();
 
 void clear_save();

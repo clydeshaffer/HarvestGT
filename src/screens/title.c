@@ -34,7 +34,8 @@ unsigned char update_title(int inputs, int last_inputs) {
         case 1:
             if(test_save_magic_number()) {
                 load_game_vars();
-                init_level(world_map_x, world_map_y, 0);
+                init_level(world_map_x, world_map_y, 1);
+                load_mobs();
                 return TITLE_SIGNAL_LOAD;
             }
             do_noise_effect(100, -100, 5);

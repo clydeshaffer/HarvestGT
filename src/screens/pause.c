@@ -73,6 +73,7 @@ unsigned char update_pause_screen(int inputs, int last_inputs) {
                 set_pause_mode(selection);
                 if(selection == PAUSE_STATE_SAVING) {
                     save_game_vars();
+                    save_mobs();
                 }
             }
             break;

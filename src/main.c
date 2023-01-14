@@ -89,6 +89,7 @@ void init_game_state(unsigned char new_state) {
         stairs_known = 0;
         updateInputs();
         init_level(128, 128, 0);
+        place_enemies();
         ChangeRomBank(BANK_COMMON);
         init_title();
         player_party[0] = veggie_templates[0];
@@ -280,7 +281,7 @@ void main() {
     clear_enemy_slots();
     load_enemy_type(ENEMY_TYPE_VEGGIES);
     ChangeRomBank(BANK_COMMON);
-    generate_map();
+    //generate_map();
 
     via[DDRB] = 0xFF;
 
@@ -462,14 +463,8 @@ void main() {
                 camera_y.i = CAMERA_LIMIT;
             }
 
-            
-
-            via[ORB] = 0x80;
-            via[ORB] = 0x01;
             draw_world();
             update_enemies();
-            via[ORB] = 0x80;
-            via[ORB] = 0x41;
 
             draw_enemies();
 
@@ -633,18 +628,22 @@ void main() {
         if(player_y.i < 64) {
             resetSeeds();
             init_level(world_map_x, world_map_y-1, 1);
+            place_enemies();
             ChangeRomBank(BANK_COMMON);
         } else if(player_y.i > 8096) {
             resetSeeds();
             init_level(world_map_x, world_map_y+1, 1);
+            place_enemies();
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i < 64) {
             resetSeeds();
             init_level(world_map_x-1, world_map_y, 1);
+            place_enemies();
             ChangeRomBank(BANK_COMMON);
         } else if(player_x.i > 8096) {
             resetSeeds();
             init_level(world_map_x+1, world_map_y, 1);
+            place_enemies();
             ChangeRomBank(BANK_COMMON);
         }
 

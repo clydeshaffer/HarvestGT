@@ -67,5 +67,4 @@ void init_level(unsigned char x, unsigned char y, unsigned char traveling) {
         camera_y.i = player_y.i - 1024;
 
         clear_enemies(); 
-        place_enemies();
 }

@@ -57,6 +57,9 @@ typedef struct MobState {
 
 extern MobState enemies[MAX_ENEMIES];
 
+extern unsigned char enemy_type_slots[ENEMY_TYPE_NUM_SLOTS];
+extern unsigned char enemy_type_used_slots;
+
 extern unsigned char enemy_count;
 
 extern unsigned char last_attacker_id;
