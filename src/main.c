@@ -13,6 +13,7 @@
 #include "fontmap.h"
 #include "screens/battle.h"
 #include "vegetables.h"
+#include "screens/title.h"
 
 int inputs = 0, last_inputs = 0;
 int inputs2 = 0, last_inputs2 = 0;
@@ -77,6 +78,7 @@ void init_game_state(unsigned char new_state) {
     game_state = new_state;
     stop_music();
     if(new_state == GAME_STATE_TITLE) {
+        init_title();
         player_max_health = INITIAL_MAX_HEALTH;
         player_dir_x = 8;
         player_dir_y = 8;
@@ -312,6 +314,8 @@ void main() {
         if(game_state == GAME_STATE_TITLE) {
             rnd();
             draw_world();
+            draw_title_screen();
+            i = update_title(inputs, last_inputs);
             ++player_anim_frame;
             if(player_anim_frame & 1) {
                 camera_x.i += player_dir_x;
@@ -324,8 +328,10 @@ void main() {
             if((camera_y.i + 32 > CAMERA_LIMIT) || (camera_y.i == 0)) {
                 player_dir_y = -player_dir_y;
             }
-            if(inputs & INPUT_MASK_START) {
+            if(i == TITLE_SIGNAL_NEW) {
                 init_game_state(GAME_STATE_PLAY);
+            } else if(i == TITLE_SIGNAL_LOAD) {
+                do_noise_effect(100, -100, 5);
             }
         }
         else if(game_state == GAME_STATE_PLAY) {    
@@ -564,13 +570,7 @@ void main() {
                 draw_fade(game_over_timer);
                 game_over_timer -= 4;
             } else {
-                //DRAW TITLE TEXT
-                cursorX = 30;
-                cursorY = 60;
-                print("Veggie Tamer");
-                cursorX = 30;
-                cursorY = 70;
-                print("Press Start");
+                draw_title_screen_postqueue();
             }
         } else if(game_state == GAME_STATE_FADEOUT) {
             if(game_over_timer < 116) {
