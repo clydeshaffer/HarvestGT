@@ -73,7 +73,7 @@ extern Frame rect; //Defined in draw_util.s
 extern const unsigned char* FontSprites;
 extern const unsigned char* HeroSprites;
 extern const unsigned char* BattleBG;
-extern const Frame* HeroFrames;
+extern const Frame HeroFrames;
 extern const Frame FontFrames;
 
 #endif
