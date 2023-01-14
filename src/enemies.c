@@ -81,7 +81,7 @@ void attack_sound_for_enemy(char type) {
     switch (type)
     {
     case ENEMY_TYPE_VEGGIES:
-            do_noise_effect(30, 64, 8);
+            //do_noise_effect(30, 64, 8);
             break;
     }
 }
@@ -353,7 +353,7 @@ void check_impact_attack(char dist) {
             player_anim_frame = 0;
             --player_health;
             player_face_enemy();
-            do_noise_effect(80, -8, 10);
+            //do_noise_effect(80, -8, 10);
             tempEnemy.mode = ENEMY_STATE_KNOCKBACK;
         }
     }

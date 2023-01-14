@@ -150,6 +150,7 @@ void init_battle(unsigned char template_num) {
     set_battle_menu_mode(MENU_TYPE_MESSAGE);
     set_menu_msg("Found ", 0);
     set_menu_msg(veggie_names[encountered_veggie.type], 6);
+    do_noise_effect(64, 60, 16);
 }
 
 unsigned char update_battle(int inputs, int last_inputs) {
@@ -168,7 +169,7 @@ unsigned char update_battle(int inputs, int last_inputs) {
                         asm("SED");
                         encountered_veggie.hp = encountered_veggie.hp - player_active_veggie.atk;
                         asm("CLD");
-                        do_noise_effect(30, 64, 8);
+                        do_noise_effect(100, -100, 5);
                         battle_state = BATTLE_STATE_PLAYER_MOVE;
                         set_battle_menu_mode(MENU_TYPE_NONE);
                         stateChangeTimer = 30;
@@ -258,7 +259,7 @@ unsigned char update_battle(int inputs, int last_inputs) {
                 if(battle_state == BATTLE_STATE_DECIDE) {
                     set_battle_menu_mode(MENU_TYPE_ACTION);
                 }
-                do_noise_effect(30, 64, 8);
+                do_noise_effect(88, -100, 5);
             }
         }
 
