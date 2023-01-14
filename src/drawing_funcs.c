@@ -12,7 +12,7 @@ extern void wait();
 extern void nop5();
 extern void nop10();
 
-void load_spritesheet(char* spriteData, char bank) {
+void load_spritesheet(char* spriteData, char bank, char yOffset) {
     char oldFlags = flagsMirror;
     char oldBanks = banksMirror;
     char bankNum = bank & 7;
@@ -33,7 +33,7 @@ void load_spritesheet(char* spriteData, char bank) {
     *dma_flags = flagsMirror;
     banksMirror = bankflip | GRAM_PAGE(bank);
     *bank_reg = banksMirror;
-    inflatemem(vram, spriteData);
+    inflatemem(vram + (yOffset*128), spriteData);
     flagsMirror = oldFlags;
     banksMirror = oldBanks;
     *dma_flags = flagsMirror;
@@ -69,6 +69,13 @@ void clear_spritebank(char bank) {
     banksMirror = oldBanks;
     *dma_flags = flagsMirror;
     *bank_reg = banksMirror;
+}
+
+extern char FaderAnimation;
+
+void load_gui_gfx() {
+    load_spritesheet(&FaderAnimation, 8, 32);
+    load_spritesheet(&FontSprites, 8, 0);
 }
 
 #pragma bss-name (push,"ZEROPAGE")
@@ -341,7 +348,7 @@ void draw_fade(unsigned char opacity) {
     *dma_flags = flagsMirror;
     banksMirror = banksMirror & 0xF8;
     *bank_reg = banksMirror;
-    SpriteRect(0, 0, 127, 127, opacity&0xF0, 64);
+    SpriteRect(0, 0, 127, 127, (opacity&0xF0) | 128, 32);
     wait();
     flagsMirror = oldFlags;
     banksMirror = oldBanks;

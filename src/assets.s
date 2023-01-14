@@ -4,6 +4,7 @@
     .export _MainMusic, _BattleMusic
     .export _EnemyFrames_VEGGIES, _EnemySprites_VEGGIES
     .export _HomesteadMap, _Forest0Map, _MazeMap, _DesertMap, _BeachMap, _ClearingMap, _RoadMap
+    .export _FaderAnimation
     .segment "COMMON"
 
 _SineTable:
@@ -52,6 +53,9 @@ _FontSprites:
 
 _BattleBG:
     .incbin "battle_bg.gtg.deflate"
+
+_FaderAnimation:
+    .incbin "fader.gtg.deflate"
 
     .segment "TILES"
 

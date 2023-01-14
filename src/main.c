@@ -263,9 +263,9 @@ void main() {
     bankflip = BANK_SECOND_FRAMEBUFFER;
     banksMirror = bankflip;
 
-    load_spritesheet(&FontSprites, 8);
-    load_spritesheet(&HeroSprites, 1);
-    load_spritesheet(&BattleBG, 16);
+    load_gui_gfx();
+    load_spritesheet(&HeroSprites, 1, 0);
+    load_spritesheet(&BattleBG, 16, 0);
     
 
     flagsMirror = DMA_NMI | DMA_ENABLE | DMA_IRQ | DMA_OPAQUE | frameflip;
@@ -309,7 +309,9 @@ void main() {
         updateInputs();
         if(game_state == GAME_STATE_TITLE) {
             rnd();
+            if(game_over_timer != 116) {
             draw_world();
+            }
             draw_title_screen();
             ++player_anim_frame;
             if(player_anim_frame & 1) {
@@ -553,11 +555,11 @@ void main() {
         }
 
         if(game_state == GAME_STATE_TITLE) {
+            draw_title_screen_postqueue();
+            draw_fade(game_over_timer);
             if(game_over_timer >= 4) {
                 draw_fade(game_over_timer);
                 game_over_timer -= 4;
-            } else {
-                draw_title_screen_postqueue();
             }
         } else if(game_state == GAME_STATE_FADEOUT) {
             if(game_over_timer < 116) {

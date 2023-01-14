@@ -36,8 +36,10 @@ typedef struct Frame {
     char x, y, w, h, gx, gy, c, b;
 } Frame;
 
-void load_spritesheet(char* spriteData, char bank);
+void load_spritesheet(char* spriteData, char bank, char yOffset);
 void clear_spritebank(char bank);
+void load_gui_gfx();
+
 void PackedSprite(const Frame *sprite_table, char x, char y, char frame, char flip, char bank, char offset);
 void QueuePackedSprite(const Frame *sprite_table, char x, char y, char frame, char flip, char bank, char offset);
 void QueueSpriteRect();

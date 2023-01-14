@@ -29,7 +29,7 @@ extern const unsigned char* Tileset_00;
 
 void switch_tileset(unsigned char level_num) {
     ChangeRomBank(BANK_TILES);
-    load_spritesheet(&Tileset_00, 0);
+    load_spritesheet(&Tileset_00, 0, 0);
 }
 
 #pragma codeseg (push, "CODE2");

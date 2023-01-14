@@ -102,7 +102,7 @@ void load_enemy_type(char type) {
         if(enemy_type_slots[i] == ENEMY_TYPE_NONE) {
             enemy_type_slots[i] = type;
             ++enemy_type_used_slots;
-            load_spritesheet(enemySpriteSheets[type], i+2);
+            load_spritesheet(enemySpriteSheets[type], i+2, 0);
             return;
         }
     }
