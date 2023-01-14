@@ -59,7 +59,7 @@ void render_menu() {
     
     if(menu_index != 0xFF) {
         queue_flags_param = DMA_GCARRY;
-        QueuePackedSprite(&FontFrames, 12, 13 + (menu_index << 3), '>' - 1, 0, bankflip, 128);
+        QueuePackedSprite(&FontFrames, textboxX - 4, textboxY + (menu_index << 3) + 4, '>' - 1, 0, bankflip, 128);
     }
 }
 
