@@ -18,10 +18,10 @@ _COBJS = globals.o gametank.o dynawave.o drawing_funcs.o \
 tilemap.o random.o music.o enemies.o level.o banking.o \
 savegame.o vegetables.o screens/battle.o screens/title.o screens/pause.o ui/menu.o main.o
 COBJS = $(patsubst %,$(ODIR)/%,$(_COBJS))
-_AOBJS = assets.o wait.o vectors.o interrupt.o draw_util.o enemy_util.o shifts.o mapload.o
+_AOBJS = assets.o wait.o vectors.o interrupt.o draw_util.o enemy_util.o shifts.o mapload.o header.o
 AOBJS = $(patsubst %,$(ODIR)/%,$(_AOBJS))
 
-_BMPOBJS = tiles.gtg.deflate farmer.gtg.deflate vegemons.gtg.deflate font.gtg.deflate battle_bg.gtg.deflate
+_BMPOBJS = tiles.gtg.deflate farmer.gtg.deflate vegemons.gtg.deflate font.gtg.deflate battle_bg.gtg.deflate fader.gtg.deflate
 
 BMPOBJS = $(patsubst %,$(ODIR)/assets/%,$(_BMPOBJS))
 
