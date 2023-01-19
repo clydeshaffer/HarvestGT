@@ -226,7 +226,7 @@ void place_enemies() {
                         }
                         if(enemies[i].mode != 0) {
                             enemy_count++;
-                            enemies[i].vegtype = (rnd() & 255) % 11;
+                            enemies[i].vegtype = (rnd() & 255) % (VEGGIE_TYPE_COUNT - 1);
                             enemies[i].hostile = 1;
                         }
                     }

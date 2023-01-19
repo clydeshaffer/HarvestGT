@@ -16,7 +16,7 @@ Veggie player_party[PLAYER_PARTY_SIZE];
     unsigned char level, xp, element;
 */
 
-char seed_inventory[12];
+char seed_inventory[VEGGIE_TYPE_COUNT];
 char selected_seed_type;
 
 char seedsThrownX[32];
@@ -89,7 +89,7 @@ void print_seed_inventory() {
 
 char randomInventorySeed() {
     char i, didprint = 0;
-    for(i = 1; i < 12; ++i) {
+    for(i = 1; i < VEGGIE_TYPE_COUNT; ++i) {
         if(seed_inventory[i] != 0) {
             return i;
         }
@@ -122,7 +122,7 @@ char last_seed_thrown;
 char seedArrowPosition;
 void draw_seed_menu_arrow();
 
-char *veggie_names[12] = {
+char *veggie_names[VEGGIE_TYPE_COUNT] = {
     " ",
     "Corn",
     "Tomato",
@@ -134,7 +134,8 @@ char *veggie_names[12] = {
     "Pumpkin",
     "Onion",
     "Broccoli",
-    "Grapes"
+    "Grapes",
+    "Raditchi"
 };
 
 char *attack_names[4] = {
@@ -145,7 +146,7 @@ char *attack_names[4] = {
 
 };
 
-Veggie veggie_templates[11] = {
+Veggie veggie_templates[VEGGIE_TYPE_COUNT-1] = {
     {
         VEGGIE_TYPE_CORN, 0x20, 0x20, 5, 5,
         1, 0, 0, 0,
@@ -218,6 +219,13 @@ Veggie veggie_templates[11] = {
     },
     {
         VEGGIE_TYPE_GRAPES, 0x20, 0x20, 5, 5,
+        1, 0, 0, 0,
+        5, 5, 5, 1,
+        0, 0, 2, 2,
+        1, 0
+    },
+    {
+        VEGGIE_TYPE_RADISH, 0x20, 0x20, 5, 5,
         1, 0, 0, 0,
         5, 5, 5, 1,
         0, 0, 2, 2,
